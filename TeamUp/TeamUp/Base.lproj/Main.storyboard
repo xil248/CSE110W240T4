@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--forgetPassword-->
         <scene sceneID="5R1-Q3-ZMv">
             <objects>
-                <viewController id="Uw3-oj-QIO" sceneMemberID="viewController">
+                <viewController title="forgetPassword" id="Uw3-oj-QIO" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iep-lw-9EZ"/>
                         <viewControllerLayoutGuide type="bottom" id="bVA-Tb-fpp"/>
@@ -71,7 +71,7 @@
                                 <string key="text">Forgot your password?
 bibibi</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="110" y="217" width="181" height="41"/>
@@ -82,7 +82,7 @@ bibibi</string>
                                 <string key="text">Enter your UCSD E-mail, we will
 send you the link to reset your password.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="38" y="247" width="325" height="75"/>
@@ -107,15 +107,16 @@ send you the link to reset your password.</string>
                             </mask>
                         </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Era-z2-4E9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-261" y="-229.5"/>
         </scene>
-        <!--View Controller-->
+        <!--SignIn-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="SignIn" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -159,17 +160,6 @@ send you the link to reset your password.</string>
                                     <segue destination="qix-Aq-Vg8" kind="show" id="TE6-wd-IXP"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Your UCSD Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lCK-3R-Jol">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="borderStyle" value="UITextBorderStyleRoundedRect"/>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="55" y="245" width="265" height="40"/>
-                                </variation>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DhA-GV-Le3">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -180,7 +170,7 @@ send you the link to reset your password.</string>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TeamUp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXa-eF-wvj">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -200,27 +190,39 @@ send you the link to reset your password.</string>
                                     <segue destination="Uw3-oj-QIO" kind="show" id="sVA-EG-f9o"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Your UCSD Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lCK-3R-Jol">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="borderStyle" value="UITextBorderStyleRoundedRect"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="55" y="245" width="265" height="40"/>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.53333333333333333" green="0.75686274509803919" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="hNa-DQ-xYm"/>
-                                <exclude reference="lCK-3R-Jol"/>
                                 <exclude reference="DhA-GV-Le3"/>
                                 <exclude reference="nXa-eF-wvj"/>
                                 <exclude reference="Phc-OY-fgP"/>
+                                <exclude reference="lCK-3R-Jol"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="hNa-DQ-xYm"/>
-                                <include reference="lCK-3R-Jol"/>
                                 <include reference="DhA-GV-Le3"/>
                                 <include reference="nXa-eF-wvj"/>
                                 <include reference="Phc-OY-fgP"/>
+                                <include reference="lCK-3R-Jol"/>
                             </mask>
                         </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="emailText" destination="lCK-3R-Jol" id="Sgb-H3-tM0"/>
                         <outlet property="passwordText" destination="DhA-GV-Le3" id="vo8-FK-b1D"/>
@@ -230,10 +232,10 @@ send you the link to reset your password.</string>
             </objects>
             <point key="canvasLocation" x="-270" y="486"/>
         </scene>
-        <!--View Controller-->
+        <!--MyGroups-->
         <scene sceneID="P68-Nu-y1F">
             <objects>
-                <viewController id="qix-Aq-Vg8" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="MyGroups" id="qix-Aq-Vg8" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9rK-SJ-TGc"/>
                         <viewControllerLayoutGuide type="bottom" id="21O-yP-mpe"/>
@@ -314,47 +316,56 @@ send you the link to reset your password.</string>
                                         <variation key="widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="344" y="31" width="22" height="22"/>
                                         </variation>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="336" y="34" width="22" height="22"/>
+                                        </variation>
                                         <connections>
                                             <segue destination="JD1-bk-77F" kind="show" id="u1L-c5-W4l"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Groups" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XW3-XK-B2J">
-                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="23"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="137" y="32" width="127" height="20"/>
-                                        </variation>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lkb-u8-JJt">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <state key="normal" title="Sign Out">
                                             <color key="titleColor" red="0.0" green="0.027450980392156862" blue="0.031372549019607843" alpha="0.5" colorSpace="calibratedRGB"/>
                                         </state>
                                         <variation key="widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="8" y="19" width="93" height="38"/>
                                         </variation>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="34" width="93" height="26"/>
+                                        </variation>
                                         <connections>
                                             <segue destination="BYZ-38-t0r" kind="show" id="gMt-aE-nju"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Groups" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XW3-XK-B2J">
+                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="137" y="32" width="127" height="20"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="146" y="34" width="108" height="20"/>
+                                        </variation>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.53333333333333333" green="0.75686274509803919" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="4li-Ce-Yp3"/>
-                                        <exclude reference="XW3-XK-B2J"/>
                                         <exclude reference="Lkb-u8-JJt"/>
+                                        <exclude reference="XW3-XK-B2J"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="65"/>
                                     <mask key="subviews">
                                         <include reference="4li-Ce-Yp3"/>
-                                        <include reference="XW3-XK-B2J"/>
                                         <include reference="Lkb-u8-JJt"/>
+                                        <include reference="XW3-XK-B2J"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -383,15 +394,16 @@ send you the link to reset your password.</string>
                             </mask>
                         </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c6f-Dw-LqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-270" y="1215"/>
+            <point key="canvasLocation" x="-270.75" y="1214.625"/>
         </scene>
-        <!--View Controller-->
+        <!--AllGroupsForClass-->
         <scene sceneID="o5b-Zw-x3b">
             <objects>
-                <viewController id="Sn0-nN-G2J" sceneMemberID="viewController">
+                <viewController title="AllGroupsForClass" id="Sn0-nN-G2J" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TB7-dS-INV"/>
                         <viewControllerLayoutGuide type="bottom" id="5at-PP-15b"/>
@@ -405,7 +417,7 @@ send you the link to reset your password.</string>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" //CSE110 WI16" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZM-zm-RbD">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="23"/>
+                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="19"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
@@ -417,7 +429,7 @@ send you the link to reset your password.</string>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2O-gh-lac">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
                                         </state>
@@ -425,7 +437,7 @@ send you the link to reset your password.</string>
                                             <rect key="frame" x="8" y="19" width="93" height="38"/>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="0.0" y="19" width="93" height="38"/>
+                                            <rect key="frame" x="0.0" y="19" width="70" height="38"/>
                                         </variation>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gob-qy-gd2">
@@ -434,7 +446,7 @@ send you the link to reset your password.</string>
                                             <rect key="frame" x="344" y="31" width="22" height="22"/>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="344" y="27" width="22" height="22"/>
+                                            <rect key="frame" x="341" y="27" width="22" height="22"/>
                                         </variation>
                                         <connections>
                                             <segue destination="R9Z-w6-5Kk" kind="show" id="cqe-JA-amA"/>
@@ -449,8 +461,7 @@ send you the link to reset your password.</string>
                                         <exclude reference="gob-qy-gd2"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="65"/>
+                                <variation key="widthClass=compact">
                                     <mask key="subviews">
                                         <include reference="YZM-zm-RbD"/>
                                         <include reference="h2O-gh-lac"/>
@@ -516,20 +527,22 @@ send you the link to reset your password.</string>
                             </mask>
                         </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AZb-Yk-9yK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-270" y="1896"/>
+            <point key="canvasLocation" x="-270.75" y="1895.625"/>
         </scene>
-        <!--View Controller-->
+        <!--GroupChat-->
         <scene sceneID="Afe-up-4ge">
             <objects>
-                <viewController id="WSX-Fx-Mn1" sceneMemberID="viewController">
+                <viewController title="GroupChat" id="WSX-Fx-Mn1" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="InF-Vb-6nJ"/>
                         <viewControllerLayoutGuide type="bottom" id="hXE-UD-JW8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="HPT-cF-wQ2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpp-iA-5Xp">
@@ -538,7 +551,7 @@ send you the link to reset your password.</string>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VaJ-47-IHu">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
-                                        <state key="normal" title="Back">
+                                        <state key="normal" title="Groups">
                                             <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
                                         </state>
                                         <variation key="widthClass=compact" fixedFrame="YES">
@@ -548,7 +561,11 @@ send you the link to reset your password.</string>
                                             <rect key="frame" x="0.0" y="19" width="93" height="38"/>
                                         </variation>
                                         <connections>
+<<<<<<< HEAD
                                             <segue destination="qix-Aq-Vg8" kind="show" id="Oi7-3l-ExI"/>
+=======
+                                            <segue destination="qix-Aq-Vg8" kind="show" id="ayI-oV-gnP"/>
+>>>>>>> ce1a6539d85a720cb76231d71ed085940d2f296a
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="//GroupName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y47-s9-EwP">
@@ -556,23 +573,33 @@ send you the link to reset your password.</string>
                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="23"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="137" y="32" width="127" height="20"/>
-                                        </variation>
                                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="119" y="13" width="163" height="40"/>
                                         </variation>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bug-av-5ay">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                        <state key="normal" title="Details">
+                                            <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="19" width="93" height="38"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="274" y="19" width="93" height="38"/>
+                                        </variation>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.53333333329999999" green="0.75686274509999996" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="VaJ-47-IHu"/>
                                         <exclude reference="Y47-s9-EwP"/>
+                                        <exclude reference="Bug-av-5ay"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="65"/>
+                                <variation key="widthClass=compact">
                                     <mask key="subviews">
                                         <include reference="VaJ-47-IHu"/>
                                     </mask>
@@ -581,6 +608,7 @@ send you the link to reset your password.</string>
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="65"/>
                                     <mask key="subviews">
                                         <include reference="Y47-s9-EwP"/>
+                                        <include reference="Bug-av-5ay"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -597,15 +625,20 @@ send you the link to reset your password.</string>
                             </mask>
                         </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hRf-hq-wuQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="-270" y="2547.75"/>
+=======
+            <point key="canvasLocation" x="-252.75" y="2492.625"/>
+>>>>>>> ce1a6539d85a720cb76231d71ed085940d2f296a
         </scene>
-        <!--View Controller-->
+        <!--createGroup-->
         <scene sceneID="SbY-QW-KI2">
             <objects>
-                <viewController id="R9Z-w6-5Kk" sceneMemberID="viewController">
+                <viewController title="createGroup" id="R9Z-w6-5Kk" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OfR-UK-c6X"/>
                         <viewControllerLayoutGuide type="bottom" id="huR-kM-i8m"/>
@@ -619,7 +652,7 @@ send you the link to reset your password.</string>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a Group" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hZ-vy-kQc">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="23"/>
+                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="19"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
@@ -635,9 +668,6 @@ send you the link to reset your password.</string>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
                                         </state>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="8" y="19" width="93" height="38"/>
-                                        </variation>
                                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="0.0" y="17" width="78" height="38"/>
                                         </variation>
@@ -653,8 +683,7 @@ send you the link to reset your password.</string>
                                         <exclude reference="4Ne-LD-5UX"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="65"/>
+                                <variation key="widthClass=compact">
                                     <mask key="subviews">
                                         <include reference="5hZ-vy-kQc"/>
                                     </mask>
@@ -683,7 +712,7 @@ send you the link to reset your password.</string>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Private" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5W-rM-Pcf">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="55" y="221" width="71" height="31"/>
@@ -718,15 +747,16 @@ send you the link to reset your password.</string>
                             </mask>
                         </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPB-D4-MFB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="453" y="1902"/>
         </scene>
-        <!--View Controller-->
+        <!--SIgnUp-->
         <scene sceneID="5JJ-HN-npT">
             <objects>
-                <viewController id="gQI-44-T19" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="SIgnUp" id="gQI-44-T19" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0fq-Id-8cp"/>
                         <viewControllerLayoutGuide type="bottom" id="yxv-Lc-PGs"/>
@@ -737,7 +767,7 @@ send you the link to reset your password.</string>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TeamUp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noV-zZ-icW">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -808,6 +838,7 @@ send you the link to reset your password.</string>
                             </mask>
                         </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="confirmPasswordText" destination="Vru-PW-Fsm" id="6GA-Qy-nhj"/>
                         <outlet property="enterEmailText" destination="gfm-u6-qMu" id="R0m-F1-1Bf"/>
@@ -816,12 +847,12 @@ send you the link to reset your password.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uTr-md-jN6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="453" y="486"/>
+            <point key="canvasLocation" x="512.25" y="504.375"/>
         </scene>
-        <!--View Controller-->
+        <!--searchClass-->
         <scene sceneID="EZw-gh-Qjf">
             <objects>
-                <viewController id="JD1-bk-77F" sceneMemberID="viewController">
+                <viewController title="searchClass" id="JD1-bk-77F" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TX0-pB-bZj"/>
                         <viewControllerLayoutGuide type="bottom" id="YSB-DH-WKN"/>
@@ -918,6 +949,7 @@ send you the link to reset your password.</string>
                             </mask>
                         </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="Rxr-Ym-l1X" id="OsI-WE-Clu"/>
                     </connections>
@@ -936,9 +968,16 @@ send you the link to reset your password.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
         <segue reference="GHt-XF-6D7"/>
         <segue reference="dOA-cT-Anv"/>
         <segue reference="T7J-Xc-ZMD"/>
         <segue reference="Oi7-3l-ExI"/>
+=======
+        <segue reference="R1p-6J-qRD"/>
+        <segue reference="ayI-oV-gnP"/>
+        <segue reference="eDG-sU-cWG"/>
+        <segue reference="gMt-aE-nju"/>
+>>>>>>> ce1a6539d85a720cb76231d71ed085940d2f296a
     </inferredMetricsTieBreakers>
 </document>

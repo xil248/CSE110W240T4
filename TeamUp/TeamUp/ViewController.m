@@ -22,7 +22,7 @@
     self.enterEmailText.borderStyle = UITextBorderStyleRoundedRect;
     self.enterPasswordText.borderStyle = UITextBorderStyleRoundedRect;
     self.confirmPasswordText.borderStyle = UITextBorderStyleRoundedRect;
-    self.gsy.frame = CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>);
+    //self.gsy.frame = CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>);
     //self.gsy.borderStyle = UITextBorderStyleRoundedRect;
    
     /* mess up
