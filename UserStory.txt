@@ -1,0 +1,15 @@
+As an undergraduate student in UCSD, I want an app that enables us to seek for partners from the same class so that we can form study groups and study together, which can effectively facilitate our understanding towards course materials and improve our grades.  
+
+As a student I should be able to join a group, and shall be able to join other students¡¯ group after my request is accepted. 
+
+As a partner seeker I should be able to see all groups for this class that are set to Visible mode, and should show number of available seats in each group. 
+
+As a team member, I want to the app to chat with each other easily and inform me others¡¯ messages in time. 
+
+As a team leader, I expect the app to provide a function to kick a member out of our group or use a verification code to join. But after a certain due date, team leader should not be able to kick a member so that all the teams can be set down to start their project.
+
+As a team member, I want the app to allow the group to be invisible to some people so that only people I invite or I know can get in.
+
+As a student, I want to meet more friends who are taking the same class and form study groups with them.
+
+As a student who has class every day, I do not want the notification too annoying.

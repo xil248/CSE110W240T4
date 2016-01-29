@@ -1,0 +1,48 @@
+Note: Meet with client every week to report and verify updates in order to keep on the right track.
+
+Week 3
+* draw user interface sketches
+* set up app skeleton on Xcode
+* do research about all the function
+* learn Objective-C
+* do research separately on a specific part
+
+Week 4
+* determine libraries and interfaces based on every one¡¯s research
+* improve interface design based on client¡¯s feedback
+* check functionality of our app with the client
+* start to create all interfaces
+
+Week 5
+* integrate signup and login into the app
+* try to save user information on server
+* test simple notification
+* test simple chat through open-source framework
+
+Week 6
+* complete signup and login with data stored on server
+* add verification for signup that only ucsd email can register
+* implement course searching
+* design interface for team poll
+* start to implement group model
+
+Week 7
+* modify related UI
+* finish group model
+* test the functionality of creating a new group
+* start to implement joining a group
+
+Week 8
+* finish the functionality of joining or quitting a group
+* add the functionality of team leader to dismiss a group
+* start to integrate chat and notification into group
+* test local data storage
+
+Week 9
+* complete chat and notification integration
+* implement any deferred functionality
+* add new methods of joining a group
+
+Week 10
+* test and debug
+* improve UI and details
