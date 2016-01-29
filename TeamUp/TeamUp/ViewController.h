@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *enterEmailText;
 @property (weak, nonatomic) IBOutlet UITextField *enterPasswordText;
 @property (weak, nonatomic) IBOutlet UITextField *confirmPasswordText;
+@property (weak, nonatomic) IBOutlet UITextField *gsy;
 
 
 @end
