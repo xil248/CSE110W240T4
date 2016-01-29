@@ -22,9 +22,18 @@
     self.enterEmailText.borderStyle = UITextBorderStyleRoundedRect;
     self.enterPasswordText.borderStyle = UITextBorderStyleRoundedRect;
     self.confirmPasswordText.borderStyle = UITextBorderStyleRoundedRect;
-    //self.gsy.frame = CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>);
-    
-    
+    self.gsy.frame = CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>);
+    //self.gsy.borderStyle = UITextBorderStyleRoundedRect;
+   
+    /* mess up
+        self.view.backgroundColor=[[UIColor blackColor] colorWithAlphaComponent:.6];
+        self.popUpView.layer.cornerRadius = 5;
+        self.popUpView.layer.shadowOpacity = 0.8;
+        self.popUpView.layer.shadowOffset = CGSizeMake(0.0f, 0.0f);
+        [super viewDidLoad];
+        // Do any additional setup after loading the view from its nib.
+
+  */
 }
 
 - (void)didReceiveMemoryWarning {

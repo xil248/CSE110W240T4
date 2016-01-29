@@ -547,6 +547,9 @@ send you the link to reset your password.</string>
                                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="0.0" y="19" width="93" height="38"/>
                                         </variation>
+                                        <connections>
+                                            <segue destination="qix-Aq-Vg8" kind="show" id="Oi7-3l-ExI"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="//GroupName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y47-s9-EwP">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -557,7 +560,7 @@ send you the link to reset your password.</string>
                                             <rect key="frame" x="137" y="32" width="127" height="20"/>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="108" y="13" width="163" height="40"/>
+                                            <rect key="frame" x="119" y="13" width="163" height="40"/>
                                         </variation>
                                     </label>
                                 </subviews>
@@ -597,7 +600,7 @@ send you the link to reset your password.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hRf-hq-wuQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-270" y="2556"/>
+            <point key="canvasLocation" x="-270" y="2547.75"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="SbY-QW-KI2">
@@ -668,13 +671,13 @@ send you the link to reset your password.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="48" y="163" width="305" height="30"/>
+                                    <rect key="frame" x="55" y="163" width="265" height="40"/>
                                 </variation>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zcq-HD-uo9">
                                 <rect key="frame" x="-25" y="-15" width="51" height="31"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="304" y="221" width="51" height="31"/>
+                                    <rect key="frame" x="271" y="221" width="51" height="31"/>
                                 </variation>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Private" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5W-rM-Pcf">
@@ -683,15 +686,15 @@ send you the link to reset your password.</string>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="48" y="221" width="71" height="31"/>
+                                    <rect key="frame" x="55" y="221" width="71" height="31"/>
                                 </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Group Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="faP-JY-ph7">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Group Name" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="faP-JY-ph7">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="48" y="107" width="305" height="30"/>
+                                    <rect key="frame" x="55" y="110" width="265" height="40"/>
                                 </variation>
                             </textField>
                         </subviews>
@@ -934,8 +937,8 @@ send you the link to reset your password.</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="GHt-XF-6D7"/>
-        <segue reference="l0E-wa-9sW"/>
         <segue reference="dOA-cT-Anv"/>
         <segue reference="T7J-Xc-ZMD"/>
+        <segue reference="Oi7-3l-ExI"/>
     </inferredMetricsTieBreakers>
 </document>
