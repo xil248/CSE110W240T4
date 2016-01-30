@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -113,10 +113,10 @@ send you the link to reset your password.</string>
             </objects>
             <point key="canvasLocation" x="-261" y="-229.5"/>
         </scene>
-        <!--SignIn-->
+        <!--signIn-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="SignIn" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="signIn" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -232,10 +232,10 @@ send you the link to reset your password.</string>
             </objects>
             <point key="canvasLocation" x="-270" y="486"/>
         </scene>
-        <!--MyGroups-->
+        <!--myGroups-->
         <scene sceneID="P68-Nu-y1F">
             <objects>
-                <viewController title="MyGroups" id="qix-Aq-Vg8" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="myGroups" id="qix-Aq-Vg8" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9rK-SJ-TGc"/>
                         <viewControllerLayoutGuide type="bottom" id="21O-yP-mpe"/>
@@ -403,10 +403,10 @@ send you the link to reset your password.</string>
             </objects>
             <point key="canvasLocation" x="-270.75" y="1214.625"/>
         </scene>
-        <!--AllGroupsForClass-->
+        <!--allGroupsForClass-->
         <scene sceneID="o5b-Zw-x3b">
             <objects>
-                <viewController title="AllGroupsForClass" id="Sn0-nN-G2J" sceneMemberID="viewController">
+                <viewController title="allGroupsForClass" id="Sn0-nN-G2J" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TB7-dS-INV"/>
                         <viewControllerLayoutGuide type="bottom" id="5at-PP-15b"/>
@@ -536,10 +536,10 @@ send you the link to reset your password.</string>
             </objects>
             <point key="canvasLocation" x="-270.75" y="1895.625"/>
         </scene>
-        <!--GroupChat-->
+        <!--groupChat-->
         <scene sceneID="Afe-up-4ge">
             <objects>
-                <viewController title="GroupChat" id="WSX-Fx-Mn1" sceneMemberID="viewController">
+                <viewController title="groupChat" id="WSX-Fx-Mn1" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="InF-Vb-6nJ"/>
                         <viewControllerLayoutGuide type="bottom" id="hXE-UD-JW8"/>
@@ -748,10 +748,10 @@ send you the link to reset your password.</string>
             </objects>
             <point key="canvasLocation" x="453" y="1902"/>
         </scene>
-        <!--SIgnUp-->
+        <!--sIgnUp-->
         <scene sceneID="5JJ-HN-npT">
             <objects>
-                <viewController title="SIgnUp" id="gQI-44-T19" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="sIgnUp" id="gQI-44-T19" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0fq-Id-8cp"/>
                         <viewControllerLayoutGuide type="bottom" id="yxv-Lc-PGs"/>
@@ -961,11 +961,61 @@ send you the link to reset your password.</string>
             </objects>
             <point key="canvasLocation" x="454" y="1206"/>
         </scene>
+        <!--groupDetailAsMember-->
+        <scene sceneID="U6g-nl-02B">
+            <objects>
+                <viewController title="groupDetailAsMember" id="6Y2-d6-1gv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wBw-cC-WGl"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ykz-0G-qov"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aPo-bY-tC3">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.85882352939999995" green="0.92941176469999998" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hdB-4g-Rdh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--memberDetails-->
+        <scene sceneID="Mjk-kq-Cvi">
+            <objects>
+                <viewController title="memberDetails" id="0Tn-AE-aCD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fnY-zb-n1Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="AZ1-ct-ipj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fC4-dM-tiL">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.85882352939999995" green="0.92941176469999998" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F2a-uo-gck" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--groupDetialAsStranger-->
+        <scene sceneID="LPI-cK-5Pq">
+            <objects>
+                <viewController title="groupDetialAsStranger" id="1CG-gd-WX3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ugU-Py-0g6"/>
+                        <viewControllerLayoutGuide type="bottom" id="ksC-k4-1WM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uYn-o7-kPE">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.85882352939999995" green="0.92941176469999998" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o2J-92-eOf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gMt-aE-nju"/>
-        <segue reference="okZ-j2-4QY"/>
-        <segue reference="T7J-Xc-ZMD"/>
-        <segue reference="dOA-cT-Anv"/>
+        <segue reference="eDG-sU-cWG"/>
+        <segue reference="gho-CR-JMk"/>
+        <segue reference="R1p-6J-qRD"/>
+        <segue reference="GHt-XF-6D7"/>
     </inferredMetricsTieBreakers>
 </document>
