@@ -97,7 +97,7 @@ withCompletionBlock:^(NSError *error, FAuthData *authData) {
 }
 
 - (IBAction)signUp:(id)sender{
-    if(![enterEmailText.text isEqualToString:confirmPasswordText]){
+    if(![enterEmailText.text isEqualToString:confirmPasswordText.text]){
         UIAlertView *alertview = [[UIAlertView alloc]
                                   initWithTitle:@"Error"
                                   message:@"Different passwords"
