@@ -66,6 +66,7 @@
 		54EA6C4A1C58A5E600BF3DC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54EA6C481C58A5E600BF3DC6 /* LaunchScreen.storyboard */; };
 		54EA6C551C58A5E600BF3DC6 /* TeamUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA6C541C58A5E600BF3DC6 /* TeamUpTests.m */; };
 		54EA6C601C58A5E600BF3DC6 /* TeamUpUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA6C5F1C58A5E600BF3DC6 /* TeamUpUITests.m */; };
+		5A9F60001C5D8735005225B7 /* 1169645.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5A9F5FFF1C5D8735005225B7 /* 1169645.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -205,6 +206,7 @@
 		54EA6C5B1C58A5E600BF3DC6 /* TeamUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeamUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54EA6C5F1C58A5E600BF3DC6 /* TeamUpUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeamUpUITests.m; sourceTree = "<group>"; };
 		54EA6C611C58A5E600BF3DC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A9F5FFF1C5D8735005225B7 /* 1169645.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1169645.jpg; sourceTree = "<group>"; };
 		94D56AEECF75E39C576FAED8 /* libPods-TeamUp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TeamUp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB480674000418BEE6F1B1D6 /* Pods-TeamUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TeamUp/Pods-TeamUp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -535,6 +537,7 @@
 				54EA6C3D1C58A5E600BF3DC6 /* ViewController.h */,
 				54EA6C3E1C58A5E600BF3DC6 /* ViewController.m */,
 				54EA6C401C58A5E600BF3DC6 /* Main.storyboard */,
+				5A9F5FFF1C5D8735005225B7 /* 1169645.jpg */,
 				54EA6C461C58A5E600BF3DC6 /* Assets.xcassets */,
 				54EA6C481C58A5E600BF3DC6 /* LaunchScreen.storyboard */,
 				54EA6C4B1C58A5E600BF3DC6 /* Info.plist */,
@@ -696,6 +699,7 @@
 			files = (
 				549610AA1C5C01AE00F8E67B /* build-libidn.sh in Resources */,
 				54EA6C4A1C58A5E600BF3DC6 /* LaunchScreen.storyboard in Resources */,
+				5A9F60001C5D8735005225B7 /* 1169645.jpg in Resources */,
 				54EA6C471C58A5E600BF3DC6 /* Assets.xcassets in Resources */,
 				549610A51C5C01AE00F8E67B /* README.txt in Resources */,
 				54EA6C421C58A5E600BF3DC6 /* Main.storyboard in Resources */,

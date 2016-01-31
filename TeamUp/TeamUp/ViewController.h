@@ -9,13 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UITextField *emailText;
 @property (weak, nonatomic) IBOutlet UITextField *passwordText;
 @property (weak, nonatomic) IBOutlet UITextField *enterEmailText;
 @property (weak, nonatomic) IBOutlet UITextField *enterPasswordText;
 @property (weak, nonatomic) IBOutlet UITextField *confirmPasswordText;
-@property (weak, nonatomic) IBOutlet UITextField *gsy;
-
+- (IBAction)showGroupInfo:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *showInfo;
+@property (weak, nonatomic) IBOutlet UITextField *groupNameText;
+@property (weak, nonatomic) IBOutlet UITextField *maxPeopleText;
 
 @end
 

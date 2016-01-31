@@ -14,6 +14,10 @@
 
 @implementation ViewController
 
+UILabel *info;
+UIButton *closeInfo;
+
+
 - (void)viewDidLoad {
   [super viewDidLoad];
   // Do any additional setup after loading the view, typically from a nib.
@@ -22,23 +26,32 @@
     self.enterEmailText.borderStyle = UITextBorderStyleRoundedRect;
     self.enterPasswordText.borderStyle = UITextBorderStyleRoundedRect;
     self.confirmPasswordText.borderStyle = UITextBorderStyleRoundedRect;
-    //self.gsy.frame = CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>);
-    //self.gsy.borderStyle = UITextBorderStyleRoundedRect;
-   
-    /* mess up
-        self.view.backgroundColor=[[UIColor blackColor] colorWithAlphaComponent:.6];
-        self.popUpView.layer.cornerRadius = 5;
-        self.popUpView.layer.shadowOpacity = 0.8;
-        self.popUpView.layer.shadowOffset = CGSizeMake(0.0f, 0.0f);
-        [super viewDidLoad];
-        // Do any additional setup after loading the view from its nib.
-
-  */
+    self.groupNameText.borderStyle = UITextBorderStyleRoundedRect;
+    self.maxPeopleText.borderStyle = UITextBorderStyleRoundedRect;
+    
+    //ckf nanshen
+    // initiliaze the info label
+    info = [[UILabel alloc] initWithFrame:CGRectMake(37, 166, 301, 280)];
+    info.text = @"AAAA";
+    info.backgroundColor = [UIColor colorWithRed:230/255 green:230/255 blue:230/255 alpha:0.15];
+    // initialze the closeinfo button
+    closeInfo = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 375, 667)];
 }
 
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)showGroupInfo:(id)sender {
+    [self.view addSubview:closeInfo];
+    [self.view addSubview:info];
+    [closeInfo addTarget:self action:@selector(btnClicked) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)btnClicked {
+    [info removeFromSuperview];
+    [closeInfo removeFromSuperview];
 }
 
 @end

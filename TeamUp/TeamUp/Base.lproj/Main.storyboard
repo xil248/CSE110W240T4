@@ -317,7 +317,7 @@ send you the link to reset your password.</string>
                                             <rect key="frame" x="344" y="31" width="22" height="22"/>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="336" y="34" width="22" height="22"/>
+                                            <rect key="frame" x="340" y="34" width="22" height="22"/>
                                         </variation>
                                         <connections>
                                             <segue destination="JD1-bk-77F" kind="show" id="u1L-c5-W4l"/>
@@ -332,7 +332,7 @@ send you the link to reset your password.</string>
                                             <rect key="frame" x="137" y="32" width="127" height="20"/>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="146" y="34" width="108" height="20"/>
+                                            <rect key="frame" x="145" y="34" width="108" height="20"/>
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lkb-u8-JJt">
@@ -369,9 +369,19 @@ send you the link to reset your password.</string>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
                                 </variation>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bc-D9-s0a">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="MyAccount"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="272" y="617" width="77" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="0Tn-AE-aCD" kind="show" id="TG1-Dy-rCN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.85882352941176465" green="0.92941176470588238" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -383,6 +393,7 @@ send you the link to reset your password.</string>
                                 <exclude reference="hpu-KA-oLs"/>
                                 <exclude reference="I3h-GI-Wgz"/>
                                 <exclude reference="YW8-dz-vpm"/>
+                                <exclude reference="5bc-D9-s0a"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -396,17 +407,22 @@ send you the link to reset your password.</string>
                                 <include reference="YW8-dz-vpm"/>
                             </mask>
                         </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="5bc-D9-s0a"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c6f-Dw-LqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-270.75" y="1214.625"/>
+            <point key="canvasLocation" x="-812.25" y="154.125"/>
         </scene>
         <!--allGroupsForClass-->
         <scene sceneID="o5b-Zw-x3b">
             <objects>
-                <viewController title="allGroupsForClass" id="Sn0-nN-G2J" sceneMemberID="viewController">
+                <viewController title="allGroupsForClass" id="Sn0-nN-G2J" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TB7-dS-INV"/>
                         <viewControllerLayoutGuide type="bottom" id="5at-PP-15b"/>
@@ -430,6 +446,9 @@ send you the link to reset your password.</string>
                                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="0.0" y="19" width="70" height="38"/>
                                         </variation>
+                                        <connections>
+                                            <segue destination="JD1-bk-77F" kind="show" id="nLv-ED-4IM"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gob-qy-gd2">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -475,29 +494,6 @@ send you the link to reset your password.</string>
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aif-wh-GTM">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="+">
-                                    <color key="titleColor" red="0.043137254901960784" green="0.14901960784313725" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="329" y="104" width="30" height="30"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="WSX-Fx-Mn1" kind="showDetail" id="T7J-Xc-ZMD"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNR-S5-Cz1">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="?">
-                                    <color key="titleColor" red="0.043137254899999998" green="0.14901960780000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="296" y="105" width="30" height="30"/>
-                                </variation>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuy-8f-Xi0">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.53333333329999999" green="0.75686274509999996" blue="0.7843137255" alpha="0.5" colorSpace="calibratedRGB"/>
@@ -508,33 +504,62 @@ send you the link to reset your password.</string>
                                     <color key="titleShadowColor" red="0.53333333329999999" green="0.75686274509999996" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="11" y="94" width="352" height="50"/>
+                                    <rect key="frame" x="11" y="85" width="352" height="50"/>
                                 </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNR-S5-Cz1">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="?">
+                                    <color key="titleColor" red="0.043137254899999998" green="0.14901960780000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="291" y="95" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="showGroupInfo:" destination="Sn0-nN-G2J" eventType="touchUpInside" id="ubB-ab-oUW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aif-wh-GTM">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.043137254901960784" green="0.14901960784313725" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="329" y="95" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="WSX-Fx-Mn1" kind="showDetail" id="T7J-Xc-ZMD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.83137254901960789" green="0.9137254901960784" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="1R1-SR-JeL"/>
-                                <exclude reference="aif-wh-GTM"/>
-                                <exclude reference="ZNR-S5-Cz1"/>
                                 <exclude reference="xuy-8f-Xi0"/>
+                                <exclude reference="ZNR-S5-Cz1"/>
+                                <exclude reference="aif-wh-GTM"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="1R1-SR-JeL"/>
-                                <include reference="aif-wh-GTM"/>
-                                <include reference="ZNR-S5-Cz1"/>
                                 <include reference="xuy-8f-Xi0"/>
+                                <include reference="ZNR-S5-Cz1"/>
+                                <include reference="aif-wh-GTM"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="showInfo" destination="ZNR-S5-Cz1" id="mbv-OS-y6h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AZb-Yk-9yK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-270.75" y="1895.625"/>
+            <point key="canvasLocation" x="-150.75" y="1828.875"/>
         </scene>
         <!--groupChat-->
         <scene sceneID="Afe-up-4ge">
@@ -582,9 +607,6 @@ send you the link to reset your password.</string>
                                         <state key="normal" title="Details">
                                             <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
                                         </state>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="8" y="19" width="93" height="38"/>
-                                        </variation>
                                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="276" y="19" width="93" height="38"/>
                                         </variation>
@@ -633,7 +655,7 @@ send you the link to reset your password.</string>
         <!--createGroup-->
         <scene sceneID="SbY-QW-KI2">
             <objects>
-                <viewController title="createGroup" id="R9Z-w6-5Kk" sceneMemberID="viewController">
+                <viewController title="createGroup" id="R9Z-w6-5Kk" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OfR-UK-c6X"/>
                         <viewControllerLayoutGuide type="bottom" id="huR-kM-i8m"/>
@@ -718,9 +740,23 @@ send you the link to reset your password.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="55" y="110" width="265" height="40"/>
+                                    <rect key="frame" x="55" y="108" width="265" height="40"/>
                                 </variation>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAn-kQ-IfL">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.49984298699979152" green="0.76510298654817388" blue="0.79462548276886513" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Create"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="55" y="275" width="265" height="40"/>
+                                </variation>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.85882352939999995" green="0.92941176469999998" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -730,6 +766,7 @@ send you the link to reset your password.</string>
                                 <exclude reference="zcq-HD-uo9"/>
                                 <exclude reference="I5W-rM-Pcf"/>
                                 <exclude reference="faP-JY-ph7"/>
+                                <exclude reference="zAn-kQ-IfL"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -739,14 +776,21 @@ send you the link to reset your password.</string>
                                 <include reference="zcq-HD-uo9"/>
                                 <include reference="I5W-rM-Pcf"/>
                                 <include reference="faP-JY-ph7"/>
+                                <include reference="zAn-kQ-IfL"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="GroupNameText" destination="faP-JY-ph7" id="Pqn-Jd-yLL"/>
+                        <outlet property="MaxPeopleText" destination="RSy-C2-8VU" id="oQu-9J-bou"/>
+                        <outlet property="groupNameText" destination="faP-JY-ph7" id="SVU-y8-TR2"/>
+                        <outlet property="maxPeopleText" destination="RSy-C2-8VU" id="xu9-5p-nDL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPB-D4-MFB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="453" y="1902"/>
+            <point key="canvasLocation" x="452.25" y="1901.625"/>
         </scene>
         <!--sIgnUp-->
         <scene sceneID="5JJ-HN-npT">
@@ -856,55 +900,6 @@ send you the link to reset your password.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0en-kD-sXk">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hj-UZ-8eA">
-                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Search Classes">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="23" name="Optima-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <rect key="frame" x="124" y="29" width="152" height="20"/>
-                                        </variation>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUx-wH-PvI">
-                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
-                                        <state key="normal" title="Back">
-                                            <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="0.0" y="19" width="86" height="38"/>
-                                        </variation>
-                                        <connections>
-                                            <segue destination="qix-Aq-Vg8" kind="show" id="gho-CR-JMk"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.53333333329999999" green="0.75686274509999996" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="4hj-UZ-8eA"/>
-                                        <exclude reference="mUx-wH-PvI"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="65"/>
-                                    <mask key="subviews">
-                                        <include reference="4hj-UZ-8eA"/>
-                                        <include reference="mUx-wH-PvI"/>
-                                    </mask>
-                                </variation>
-                            </view>
                             <searchBar contentMode="redraw" searchBarStyle="prominent" placeholder="eg. CSE110" translatesAutoresizingMaskIntoConstraints="NO" id="rRa-na-a78">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="yes" keyboardAppearance="light"/>
@@ -923,24 +918,68 @@ send you the link to reset your password.</string>
                                     <segue destination="Sn0-nN-G2J" kind="show" id="R1p-6J-qRD"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yIs-fe-CQU">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUx-wH-PvI">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="0.0" y="19" width="86" height="38"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="16" width="86" height="38"/>
+                                        </variation>
+                                        <connections>
+                                            <segue destination="qix-Aq-Vg8" kind="show" id="gho-CR-JMk"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search Classes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vcn-zS-Fng">
+                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="23"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="126" y="24" width="163" height="21"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.53333333333333333" green="0.75686274509803919" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="mUx-wH-PvI"/>
+                                        <exclude reference="Vcn-zS-Fng"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                    <mask key="subviews">
+                                        <include reference="mUx-wH-PvI"/>
+                                        <include reference="Vcn-zS-Fng"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.85882352941176465" green="0.92941176470588238" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="0en-kD-sXk"/>
                                 <exclude reference="rRa-na-a78"/>
                                 <exclude reference="bAC-jd-ziv"/>
+                                <exclude reference="yIs-fe-CQU"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="0en-kD-sXk"/>
                                 <include reference="rRa-na-a78"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="bAC-jd-ziv"/>
+                                <include reference="yIs-fe-CQU"/>
                             </mask>
                         </variation>
                     </view>
@@ -959,7 +998,7 @@ send you the link to reset your password.</string>
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="454" y="1206"/>
+            <point key="canvasLocation" x="453.75" y="1205.625"/>
         </scene>
         <!--groupDetailAsMember-->
         <scene sceneID="U6g-nl-02B">
@@ -970,13 +1009,141 @@ send you the link to reset your password.</string>
                         <viewControllerLayoutGuide type="bottom" id="Ykz-0G-qov"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aPo-bY-tC3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ut7-xI-WtS">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pu5-Yn-v2t">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                        <state key="normal" title="Chat">
+                                            <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="-10" y="18" width="93" height="38"/>
+                                        </variation>
+                                        <connections>
+                                            <segue destination="WSX-Fx-Mn1" kind="show" id="8Ue-zy-tdF"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gad-Lu-gFM">
+                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="23"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="113" y="23" width="175" height="29"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.53333333329999999" green="0.75686274509999996" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="pu5-Yn-v2t"/>
+                                        <exclude reference="gad-Lu-gFM"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="65"/>
+                                    <mask key="subviews">
+                                        <include reference="pu5-Yn-v2t"/>
+                                        <include reference="gad-Lu-gFM"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="65"/>
+                                </variation>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELo-zg-TyW">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.1122704859737057" blue="0.21968304723541188" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Quit">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="80" y="399" width="228" height="30"/>
+                                </variation>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1169645.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cCy-rt-XXQ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="33" y="110" width="80" height="80"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1169645.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="GoR-pU-qnx">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="147" y="110" width="80" height="80"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1169645.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1TB-fC-E9X">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="266" y="110" width="80" height="80"/>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xinghang Li" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCr-r5-flV">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="144" y="217" width="91" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xinghang Li" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbY-gj-Cc9">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="261" y="217" width="91" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xinghang Li" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qG-e8-hdJ">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="28" y="217" width="91" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.85882352939999995" green="0.92941176469999998" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ut7-xI-WtS"/>
+                                <exclude reference="ELo-zg-TyW"/>
+                                <exclude reference="cCy-rt-XXQ"/>
+                                <exclude reference="GoR-pU-qnx"/>
+                                <exclude reference="1TB-fC-E9X"/>
+                                <exclude reference="lCr-r5-flV"/>
+                                <exclude reference="SbY-gj-Cc9"/>
+                                <exclude reference="9qG-e8-hdJ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ut7-xI-WtS"/>
+                                <include reference="ELo-zg-TyW"/>
+                                <include reference="cCy-rt-XXQ"/>
+                                <include reference="GoR-pU-qnx"/>
+                                <include reference="1TB-fC-E9X"/>
+                                <include reference="lCr-r5-flV"/>
+                                <include reference="SbY-gj-Cc9"/>
+                                <include reference="9qG-e8-hdJ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hdB-4g-Rdh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="366.75" y="175.125"/>
         </scene>
         <!--memberDetails-->
         <scene sceneID="Mjk-kq-Cvi">
@@ -987,35 +1154,156 @@ send you the link to reset your password.</string>
                         <viewControllerLayoutGuide type="bottom" id="AZ1-ct-ipj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fC4-dM-tiL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wPo-A4-N79">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NE-0H-yWh">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                        <state key="normal" title="Details">
+                                            <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="0.0" y="19" width="86" height="38"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="16" width="86" height="38"/>
+                                        </variation>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDy-nc-bxX">
+                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="23"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="142" y="21" width="91" height="28"/>
+                                        </variation>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y57-ix-awt">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                        <state key="normal" title="Edit">
+                                            <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="0.0" y="19" width="86" height="38"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="281" y="15" width="86" height="38"/>
+                                        </variation>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.53333333329999999" green="0.75686274509999996" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="4NE-0H-yWh"/>
+                                        <exclude reference="gDy-nc-bxX"/>
+                                        <exclude reference="y57-ix-awt"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                    <mask key="subviews">
+                                        <include reference="4NE-0H-yWh"/>
+                                        <include reference="gDy-nc-bxX"/>
+                                        <include reference="y57-ix-awt"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xinghang Li" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25i-Mn-8Wh">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="176" y="127" width="150" height="50"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class: Econ 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MV7-pL-fA9">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="35" y="297" width="120" height="24"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other: A man of his word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIX-tS-0Ff">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="35" y="325" width="215" height="23"/>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1169645.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="eo3-Pg-nVQ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="35" y="114" width="113" height="94"/>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year: Senior" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9OE-hJ-6e6">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="35" y="268" width="118" height="26"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Major: Economics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdI-DA-J6s">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="35" y="239" width="165" height="25"/>
+                                </variation>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.85882352939999995" green="0.92941176469999998" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="wPo-A4-N79"/>
+                                <exclude reference="25i-Mn-8Wh"/>
+                                <exclude reference="MV7-pL-fA9"/>
+                                <exclude reference="hIX-tS-0Ff"/>
+                                <exclude reference="eo3-Pg-nVQ"/>
+                                <exclude reference="9OE-hJ-6e6"/>
+                                <exclude reference="wdI-DA-J6s"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="wPo-A4-N79"/>
+                                <include reference="25i-Mn-8Wh"/>
+                                <include reference="MV7-pL-fA9"/>
+                                <include reference="hIX-tS-0Ff"/>
+                                <include reference="eo3-Pg-nVQ"/>
+                                <include reference="9OE-hJ-6e6"/>
+                                <include reference="wdI-DA-J6s"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F2a-uo-gck" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-        </scene>
-        <!--groupDetialAsStranger-->
-        <scene sceneID="LPI-cK-5Pq">
-            <objects>
-                <viewController title="groupDetialAsStranger" id="1CG-gd-WX3" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ugU-Py-0g6"/>
-                        <viewControllerLayoutGuide type="bottom" id="ksC-k4-1WM"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="uYn-o7-kPE">
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.85882352939999995" green="0.92941176469999998" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="o2J-92-eOf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
+            <point key="canvasLocation" x="366.75" y="229.125"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1169645.jpg" width="634" height="368"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eDG-sU-cWG"/>
-        <segue reference="gho-CR-JMk"/>
-        <segue reference="R1p-6J-qRD"/>
         <segue reference="GHt-XF-6D7"/>
+        <segue reference="R1p-6J-qRD"/>
+        <segue reference="u1L-c5-W4l"/>
+        <segue reference="okZ-j2-4QY"/>
+        <segue reference="8Ue-zy-tdF"/>
     </inferredMetricsTieBreakers>
 </document>
