@@ -14,14 +14,17 @@
 
 @implementation ViewController
 @synthesize emailText, passwordText, enterEmailText, enterPasswordText, confirmPasswordText, showInfo, groupNameText, maxPeopleText;
+
 UILabel *info;
 UIButton *closeInfo;
 Firebase *firebase;
 UIStoryboard *mainstoryboard;
 UIViewController *viewcontroller;
+NSString *email;
+UIAlertAction* defaultAction;
+
 - (void)viewDidLoad {
   [super viewDidLoad];
-    mainstoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
   // Do any additional setup after loading the view, typically from a nib.
     self.emailText.borderStyle = UITextBorderStyleRoundedRect;
     self.passwordText.borderStyle = UITextBorderStyleRoundedRect;
@@ -30,27 +33,16 @@ UIViewController *viewcontroller;
     self.confirmPasswordText.borderStyle = UITextBorderStyleRoundedRect;
     self.groupNameText.borderStyle = UITextBorderStyleRoundedRect;
     self.maxPeopleText.borderStyle = UITextBorderStyleRoundedRect;
-    
-    //ckf nanshen
-    // initiliaze the info label
+    //all initialization goes here
+    defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}]; //initialize the default alertview action
+    mainstoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    firebase = [[Firebase alloc] initWithUrl:@"https://resplendent-inferno-8485.firebaseio.com"];
     info = [[UILabel alloc] initWithFrame:CGRectMake(37, 166, 301, 280)];
     info.text = @"AAAA";
     info.backgroundColor = [UIColor colorWithRed:230/255 green:230/255 blue:230/255 alpha:0.15];
     // initialze the closeinfo button
     closeInfo = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 375, 667)];
-    //start to load data from firebase
-    //[firebase_users removeAllObservers];
-    firebase = [[Firebase alloc] initWithUrl:@"https://resplendent-inferno-8485.firebaseio.com"];
-//    Firebase* firebase_users = [firebase childByAppendingPath: @"users"];
-//    NSDictionary *QHBoy = @{@"name" : @"Kefan Chen",
-//                            @"email" : @"ckf@ucsd.edu",
-//                            @"password" : @"wohaoshuai"};
-//    NSDictionary *LXH = @{@"name" : @"Xinghang Li",
-//                          @"email" : @"lxh@ucsd.edu",
-//                          @"password" : @"wohaomei"};
-//    NSDictionary *users = @{@"QHBoy" : QHBoy,
-//                            @"LXH" : LXH};
-//    [firebase_users setValue:users];
+    
 
 }
 
@@ -71,7 +63,7 @@ UIViewController *viewcontroller;
 }
 
 - (IBAction)signIn:(id)sender{
-    NSString *email = emailText.text;
+    email = emailText.text;
     NSString *password = passwordText.text;
     ///
     [firebase authUser:email password:password
@@ -79,14 +71,12 @@ withCompletionBlock:^(NSError *error, FAuthData *authData) {
     
     if (error) {
         NSString *errorMessage = [error localizedDescription];
-        UIAlertView *alertview = [[UIAlertView alloc]
-                                  initWithTitle:@"Error"
-                                  message:errorMessage
-                                  delegate:nil
-                                  cancelButtonTitle:@"OK"
-                                  otherButtonTitles:nil
-                                  ];
-        [alertview show];
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error"
+                                                                       message:errorMessage
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        
+        [alert addAction:defaultAction];
+        [self presentViewController:alert animated:YES completion:nil];
         
     } else {
         viewcontroller = [mainstoryboard instantiateViewControllerWithIdentifier:@"myGroupsViewController"];
@@ -97,15 +87,14 @@ withCompletionBlock:^(NSError *error, FAuthData *authData) {
 }
 
 - (IBAction)signUp:(id)sender{
-    if(![enterEmailText.text isEqualToString:confirmPasswordText.text]){
-        UIAlertView *alertview = [[UIAlertView alloc]
-                                  initWithTitle:@"Error"
-                                  message:@"Different passwords"
-                                  delegate:nil
-                                  cancelButtonTitle:@"OK"
-                                  otherButtonTitles:nil
-                                  ];
-        [alertview show];
+    email = enterEmailText.text;
+    if(![enterPasswordText.text isEqualToString:confirmPasswordText.text]){
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error"
+                                                                       message:@"Different passwords"
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        
+        [alert addAction:defaultAction];
+        [self presentViewController:alert animated:YES completion:nil];
         enterPasswordText.text = @"";
         confirmPasswordText.text = @"";
     }
@@ -113,14 +102,12 @@ withCompletionBlock:^(NSError *error, FAuthData *authData) {
     [firebase createUser:enterEmailText.text password:enterPasswordText.text withValueCompletionBlock:^(NSError *error, NSDictionary *result) {
     if (error) {
         NSString *errorMessage = [error localizedDescription];
-        UIAlertView *alertview = [[UIAlertView alloc]
-                                  initWithTitle:@"Error"
-                                  message:errorMessage
-                                  delegate:nil
-                                  cancelButtonTitle:@"OK"
-                                  otherButtonTitles:nil
-                                  ];
-        [alertview show];
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error"
+                                                                       message:errorMessage
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        
+        [alert addAction:defaultAction];
+        [self presentViewController:alert animated:YES completion:nil];
     } else {
         viewcontroller = [mainstoryboard instantiateViewControllerWithIdentifier:@"myGroupsViewController"];
         [self presentViewController:viewcontroller animated:YES completion:nil];
