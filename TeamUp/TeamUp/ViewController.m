@@ -32,9 +32,12 @@ UIAlertAction* defaultAction;
   // Do any additional setup after loading the view, typically from a nib.
     self.emailText.borderStyle = UITextBorderStyleRoundedRect;
     self.passwordText.borderStyle = UITextBorderStyleRoundedRect;
+    [self.passwordText setSecureTextEntry:YES];
     self.enterEmailText.borderStyle = UITextBorderStyleRoundedRect;
     self.enterPasswordText.borderStyle = UITextBorderStyleRoundedRect;
+    [self.enterPasswordText setSecureTextEntry:YES];
     self.confirmPasswordText.borderStyle = UITextBorderStyleRoundedRect;
+    [self.confirmPasswordText setSecureTextEntry:YES];
     self.groupNameText.borderStyle = UITextBorderStyleRoundedRect;
     self.maxPeopleText.borderStyle = UITextBorderStyleRoundedRect;
     
