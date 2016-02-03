@@ -19,6 +19,5 @@
 - (IBAction)showGroupInfo:(id)sender;
 - (IBAction)signIn:(id)sender;
 - (IBAction)signUp:(id)sender;
-
 @end
 

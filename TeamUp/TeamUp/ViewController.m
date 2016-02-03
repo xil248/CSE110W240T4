@@ -18,9 +18,13 @@
 UILabel *info;
 UIButton *closeInfo;
 Firebase *firebase;
+Firebase *users_ref;
+Firebase *users;
 UIStoryboard *mainstoryboard;
 UIViewController *viewcontroller;
 NSString *email;
+NSString *name;
+NSString *emailPrefix; //by default user name
 UIAlertAction* defaultAction;
 
 - (void)viewDidLoad {
@@ -33,16 +37,20 @@ UIAlertAction* defaultAction;
     self.confirmPasswordText.borderStyle = UITextBorderStyleRoundedRect;
     self.groupNameText.borderStyle = UITextBorderStyleRoundedRect;
     self.maxPeopleText.borderStyle = UITextBorderStyleRoundedRect;
+    
     //all initialization goes here
+    
     defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}]; //initialize the default alertview action
     mainstoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     firebase = [[Firebase alloc] initWithUrl:@"https://resplendent-inferno-8485.firebaseio.com"];
+    users_ref = [firebase childByAppendingPath:@"users"];
     info = [[UILabel alloc] initWithFrame:CGRectMake(37, 166, 301, 280)];
     info.text = @"AAAA";
     info.backgroundColor = [UIColor colorWithRed:230/255 green:230/255 blue:230/255 alpha:0.15];
     // initialze the closeinfo button
     closeInfo = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 375, 667)];
     
+    //initialization ends here
 
 }
 
@@ -63,59 +71,73 @@ UIAlertAction* defaultAction;
 }
 
 - (IBAction)signIn:(id)sender{
-    email = emailText.text;
-    NSString *password = passwordText.text;
-    ///
-    [firebase authUser:email password:password
-withCompletionBlock:^(NSError *error, FAuthData *authData) {
-    
+    [firebase authUser:emailText.text password:passwordText.text withCompletionBlock:^(NSError *error, FAuthData *authData) {
     if (error) {
         NSString *errorMessage = [error localizedDescription];
-        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error"
-                                                                       message:errorMessage
-                                                                preferredStyle:UIAlertControllerStyleAlert];
-        
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error" message:errorMessage preferredStyle:UIAlertControllerStyleAlert];
         [alert addAction:defaultAction];
         [self presentViewController:alert animated:YES completion:nil];
-        
     } else {
+        email = emailText.text;
+        emailPrefix = [self getEmailPrefix: email];
+        [self loadData];
         viewcontroller = [mainstoryboard instantiateViewControllerWithIdentifier:@"myGroupsViewController"];
         [self presentViewController:viewcontroller animated:YES completion:nil];
-
     }
-}];
+    }];
+    
 }
 
 - (IBAction)signUp:(id)sender{
-    email = enterEmailText.text;
     if(![enterPasswordText.text isEqualToString:confirmPasswordText.text]){
-        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error"
-                                                                       message:@"Different passwords"
-                                                                preferredStyle:UIAlertControllerStyleAlert];
-        
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"Different passwords" preferredStyle:UIAlertControllerStyleAlert];
         [alert addAction:defaultAction];
         [self presentViewController:alert animated:YES completion:nil];
         enterPasswordText.text = @"";
         confirmPasswordText.text = @"";
+        return;
     }
     else{
     [firebase createUser:enterEmailText.text password:enterPasswordText.text withValueCompletionBlock:^(NSError *error, NSDictionary *result) {
     if (error) {
         NSString *errorMessage = [error localizedDescription];
-        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error"
-                                                                       message:errorMessage
-                                                                preferredStyle:UIAlertControllerStyleAlert];
-        
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error" message:errorMessage preferredStyle:UIAlertControllerStyleAlert];
         [alert addAction:defaultAction];
         [self presentViewController:alert animated:YES completion:nil];
     } else {
+        email = enterEmailText.text;
+        emailPrefix = [self getEmailPrefix: email];
+        [self loadData];
         viewcontroller = [mainstoryboard instantiateViewControllerWithIdentifier:@"myGroupsViewController"];
         [self presentViewController:viewcontroller animated:YES completion:nil];
     }
-}];
+    }];
     }
+    
 }
 
--(IBAction)keyboardExit:(id)sender{} //dismiss keyboard
+- (IBAction)keyboardExit:(id)sender{} //dismiss keyboard
+
+- (NSString*)getEmailPrefix:(NSString*) email{
+    NSString *emailPrefix = [[email componentsSeparatedByString:@"@"] objectAtIndex:0];
+    return emailPrefix;
+}
+
+- (void) loadData{
+    if(emailPrefix!=nil){
+        users = [users_ref childByAppendingPath:emailPrefix];
+        [users observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+            if(!snapshot.exists){
+                NSLog(@"user info not found");
+                return;
+            }else{
+            name = snapshot.value[@"name"];
+            NSLog(@"name:");
+            NSLog(name);
+            NSLog(@"end");
+            }
+        }];
+    }
+}
 
 @end
