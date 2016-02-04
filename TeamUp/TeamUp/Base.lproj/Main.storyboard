@@ -1340,9 +1340,9 @@ send you the link to reset your password.</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="GHt-XF-6D7"/>
-        <segue reference="R1p-6J-qRD"/>
         <segue reference="nLv-ED-4IM"/>
-        <segue reference="gho-CR-JMk"/>
+        <segue reference="R1p-6J-qRD"/>
+        <segue reference="okZ-j2-4QY"/>
         <segue reference="8Ue-zy-tdF"/>
     </inferredMetricsTieBreakers>
 </document>

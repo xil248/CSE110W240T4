@@ -23,13 +23,13 @@ Firebase *users;
 UIStoryboard *mainstoryboard;
 UIViewController *viewcontroller;
 NSString *email;
+NSString *charsOfEmail; //store the valid cahracters of an email address (underscore _ , letters and numbers only)
 NSString *name;
-NSString *emailPrefix; //by default user name
 UIAlertAction* defaultAction;
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  // Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.
     self.emailText.borderStyle = UITextBorderStyleRoundedRect;
     self.passwordText.borderStyle = UITextBorderStyleRoundedRect;
     [self.passwordText setSecureTextEntry:YES];
@@ -54,6 +54,21 @@ UIAlertAction* defaultAction;
     closeInfo = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 375, 667)];
     
     //initialization ends here
+    //not run-time initialization
+    NSDictionary *test = @{
+                                    @"name" : @"test",
+                                    @"email": @"test@ucsd.edu"
+                                    };
+    NSDictionary *jiz010 = @{
+                               @"name" : @"jiasheng zhu",
+                               @"email": @"jiz010@ucsd.edu"
+                               };
+    NSDictionary *users = @{
+                            @"test_ucsdedu": test,
+                            @"jiz010ucsdedu": jiz010
+                            };
+    [users_ref setValue: users];
+    //end "not run-time initialization"
 
 }
 
@@ -82,7 +97,6 @@ UIAlertAction* defaultAction;
         [self presentViewController:alert animated:YES completion:nil];
     } else {
         email = emailText.text;
-        emailPrefix = [self getEmailPrefix: email];
         [self loadData];
         viewcontroller = [mainstoryboard instantiateViewControllerWithIdentifier:@"myGroupsViewController"];
         [self presentViewController:viewcontroller animated:YES completion:nil];
@@ -109,7 +123,6 @@ UIAlertAction* defaultAction;
         [self presentViewController:alert animated:YES completion:nil];
     } else {
         email = enterEmailText.text;
-        emailPrefix = [self getEmailPrefix: email];
         [self loadData];
         viewcontroller = [mainstoryboard instantiateViewControllerWithIdentifier:@"myGroupsViewController"];
         [self presentViewController:viewcontroller animated:YES completion:nil];
@@ -121,14 +134,10 @@ UIAlertAction* defaultAction;
 
 - (IBAction)keyboardExit:(id)sender{} //dismiss keyboard
 
-- (NSString*)getEmailPrefix:(NSString*) email{
-    NSString *emailPrefix = [[email componentsSeparatedByString:@"@"] objectAtIndex:0];
-    return emailPrefix;
-}
 
 - (void) loadData{
-    if(emailPrefix!=nil){
-        users = [users_ref childByAppendingPath:emailPrefix];
+    if(email!=nil){
+        users = [users_ref childByAppendingPath:email];
         [users observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
             if(!snapshot.exists){
                 NSLog(@"user info not found");
@@ -139,6 +148,18 @@ UIAlertAction* defaultAction;
             }
         }];
     }
+}
+
+- (NSString *) convertEmail:(NSString *) email{
+    NSString *convertedEmail;
+    char c;
+    for(int i = 0; i < email.length; ++i){
+        c =[email characterAtIndex:i];
+        if((c > 47 && c < 58)||(c > 64 && c < 91)||(c > 96 && c < 123)||c == '_'){
+            
+        }
+    }
+    return convertedEmail;
 }
 
 - (IBAction)resetPassword:(id)sender{
