@@ -107,7 +107,15 @@ UIAlertAction* defaultAction;
 }
 
 - (IBAction)signUp:(id)sender{
-    if(![enterPasswordText.text isEqualToString:confirmPasswordText.text]){
+    NSString * domain = [enterEmailText.text substringFromIndex:MAX((int)[enterEmailText.text length]-8, 0)];
+    
+    if (![domain isEqualToString:@"ucsd.edu"]) {
+         UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"You must use a ucsd email!" preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:defaultAction];
+        [self presentViewController:alert animated:YES completion:nil];
+        return;
+    }
+    else if(![enterPasswordText.text isEqualToString:confirmPasswordText.text]){
         UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"Different passwords" preferredStyle:UIAlertControllerStyleAlert];
         [alert addAction:defaultAction];
         [self presentViewController:alert animated:YES completion:nil];
