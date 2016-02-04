@@ -55,19 +55,19 @@ UIAlertAction* defaultAction;
     
     //initialization ends here
     //not run-time initialization
-    NSDictionary *test = @{
-                                    @"name" : @"test",
-                                    @"email": @"test@ucsd.edu"
-                                    };
-    NSDictionary *jiz010 = @{
-                               @"name" : @"jiasheng zhu",
-                               @"email": @"jiz010@ucsd.edu"
-                               };
-    NSDictionary *users = @{
-                            @"test_ucsdedu": test,
-                            @"jiz010ucsdedu": jiz010
-                            };
-    [users_ref setValue: users];
+//    NSDictionary *test = @{
+//                                    @"name" : @"test",
+//                                    @"email": @"test@ucsd.edu"
+//                                    };
+//    NSDictionary *jiz010 = @{
+//                               @"name" : @"jiasheng zhu",
+//                               @"email": @"jiz010@ucsd.edu"
+//                               };
+//    NSDictionary *users = @{
+//                            @"test_ucsdedu": test,
+//                            @"jiz010ucsdedu": jiz010
+//                            };
+//    [users_ref setValue: users];
     //end "not run-time initialization"
 
 }
