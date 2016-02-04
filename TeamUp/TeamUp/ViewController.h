@@ -17,10 +17,14 @@
 @property (weak, nonatomic) IBOutlet UITextField *groupNameText;
 @property (weak, nonatomic) IBOutlet UITextField *maxPeopleText;
 @property (weak, nonatomic) IBOutlet UITextField *resetPasswordText;
+@property (weak, nonatomic) IBOutlet UITextField *memberNameText;
+@property (weak, nonatomic) IBOutlet UITextField *memberMajorText;
+@property (weak, nonatomic) IBOutlet UITextField *memberYearText;
 - (IBAction)showGroupInfo:(id)sender;
 - (IBAction)signIn:(id)sender;
 - (IBAction)signUp:(id)sender;
 - (IBAction)resetPassword:(id)sender;
 - (IBAction)signOut:(id)sender;
+- (IBAction)memberInfoEditor:(id)sender;
 @end
 

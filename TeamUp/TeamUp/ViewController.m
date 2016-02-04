@@ -13,7 +13,7 @@
 @end
 
 @implementation ViewController
-@synthesize emailText, passwordText, enterEmailText, enterPasswordText, confirmPasswordText, showInfo, groupNameText, maxPeopleText, resetPasswordText;
+@synthesize emailText, passwordText, enterEmailText, enterPasswordText, confirmPasswordText, showInfo, groupNameText, maxPeopleText, resetPasswordText, memberMajorText,memberNameText,memberYearText;
 
 Firebase *firebase;
 Firebase *users_ref;
@@ -26,6 +26,9 @@ NSString *email;
 NSString *uid; //store the valid cahracters of an email address (underscore _ , letters and numbers only)
 NSString *name;
 UIAlertAction* defaultAction;
+NSString *year;
+NSString *major;
+
 
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -55,6 +58,9 @@ UIAlertAction* defaultAction;
     
     //initialization ends here
     //not run-time initialization
+    memberNameText.text = (name == nil)? @"" : name;
+    memberYearText.text = (year == nil)? @"" : year;
+    memberMajorText.text = (major == nil)? @"" : major;   // << this is a compromise, change it if could
 //    NSDictionary *test = @{
 //                                    @"name" : @"test",
 //                                    @"email": @"test@ucsd.edu"
@@ -99,12 +105,22 @@ UIAlertAction* defaultAction;
         email = emailText.text;
         uid = authData.uid;
         [self loadData];
+        users = [users_ref childByAppendingPath:uid];
+        [users observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+            name = snapshot.value[@"name"];
+            year = snapshot.value[@"year"];
+            major = snapshot.value[@"major"];
+        } withCancelBlock:^(NSError *error) {
+            NSLog(@"%@", error.description);
+        }];
         viewcontroller = [mainstoryboard instantiateViewControllerWithIdentifier:@"myGroupsViewController"];
         [self presentViewController:viewcontroller animated:YES completion:nil];
         NSLog(@"user should have signed in");
     }
     }];
-    
+//    memberYearText.text = year;
+//    memberNameText.text = name;
+//    memberMajorText.text = major;
 }
 
 - (IBAction)signUp:(id)sender{
@@ -135,17 +151,19 @@ UIAlertAction* defaultAction;
         email = enterEmailText.text;
         uid = result[@"uid"];
         [self loadData];
-        viewcontroller = [mainstoryboard instantiateViewControllerWithIdentifier:@"myGroupsViewController"];
-        [self presentViewController:viewcontroller animated:YES completion:nil];
+        name = @"new user";
+        major = @"undecided";
+        year = @"0";
         NSDictionary *user_info = @{
-                                    @"name" : @"new user",
+                                    @"name" : name,
                                     @"email" : email,
-                                    @"major" : @"undecided",
-                                    @"year" : @"0"
+                                    @"major" : major,
+                                    @"year" : year
                                     };
         NSDictionary *new_user = @{uid : user_info};
         [users_ref updateChildValues:new_user];
         NSLog(@"user should have signed up");
+        [self memberInfoEditor:nil];  //test if this will cause an error
     }
     }];
     }
@@ -158,6 +176,8 @@ UIAlertAction* defaultAction;
     email = @"";
     uid = @"";
     name = @"";
+    year = @"";
+    major = @"";
 }
 
 - (IBAction)keyboardExit:(id)sender{} //dismiss keyboard
@@ -190,6 +210,16 @@ UIAlertAction* defaultAction;
             [resetPasswordText setText:@"sent"];
         }
     }];
+}
+
+- (IBAction)memberInfoEditor:(id)sender{
+    viewcontroller = [mainstoryboard instantiateViewControllerWithIdentifier:@"memberDetailsViewController"];
+    [self presentViewController:viewcontroller animated:YES completion:nil];
+    NSLog(@"%@ %@ %@", name, major, year);
+    memberNameText.text = name;
+    memberYearText.text = year;
+    memberMajorText.text = major;
+    
 }
 
 @end
