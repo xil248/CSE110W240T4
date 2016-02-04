@@ -124,7 +124,7 @@ UIAlertAction* defaultAction;
         [self presentViewController:alert animated:YES completion:nil];
     } else {
         email = enterEmailText.text;
-        uid = firebase.authData.uid;
+        uid = result[@"uid"];
         [self loadData];
         viewcontroller = [mainstoryboard instantiateViewControllerWithIdentifier:@"myGroupsViewController"];
         [self presentViewController:viewcontroller animated:YES completion:nil];
@@ -132,6 +132,8 @@ UIAlertAction* defaultAction;
                                     @"name" : @"new user",
                                     @"email" : email
                                     };
+        NSLog(@"uid is ");
+        NSLog(uid);
         NSDictionary *new_user = @{uid : user_info};
         [users_ref updateChildValues:new_user];
     }
