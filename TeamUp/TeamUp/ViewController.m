@@ -15,11 +15,11 @@
 @implementation ViewController
 @synthesize emailText, passwordText, enterEmailText, enterPasswordText, confirmPasswordText, showInfo, groupNameText, maxPeopleText, resetPasswordText;
 
-UILabel *info;
-UIButton *closeInfo;
 Firebase *firebase;
 Firebase *users_ref;
 Firebase *users;
+UILabel *info;
+UIButton *closeInfo;
 UIStoryboard *mainstoryboard;
 UIViewController *viewcontroller;
 NSString *email;
@@ -101,6 +101,7 @@ UIAlertAction* defaultAction;
         [self loadData];
         viewcontroller = [mainstoryboard instantiateViewControllerWithIdentifier:@"myGroupsViewController"];
         [self presentViewController:viewcontroller animated:YES completion:nil];
+        NSLog(@"user should have signed in");
     }
     }];
     
@@ -130,12 +131,13 @@ UIAlertAction* defaultAction;
         [self presentViewController:viewcontroller animated:YES completion:nil];
         NSDictionary *user_info = @{
                                     @"name" : @"new user",
-                                    @"email" : email
+                                    @"email" : email,
+                                    @"major" : @"undecided",
+                                    @"year" : @"0"
                                     };
-        NSLog(@"uid is ");
-        NSLog(uid);
         NSDictionary *new_user = @{uid : user_info};
         [users_ref updateChildValues:new_user];
+        NSLog(@"user should have signed up");
     }
     }];
     }
@@ -144,6 +146,10 @@ UIAlertAction* defaultAction;
 
 - (IBAction)signOut:(id)sender{
     [firebase unauth];
+    NSLog(@"user should be signed out");
+    email = @"";
+    uid = @"";
+    name = @"";
 }
 
 - (IBAction)keyboardExit:(id)sender{} //dismiss keyboard
