@@ -23,7 +23,7 @@ Firebase *users;
 UIStoryboard *mainstoryboard;
 UIViewController *viewcontroller;
 NSString *email;
-NSString *charsOfEmail; //store the valid cahracters of an email address (underscore _ , letters and numbers only)
+NSString *uid; //store the valid cahracters of an email address (underscore _ , letters and numbers only)
 NSString *name;
 UIAlertAction* defaultAction;
 
@@ -97,6 +97,7 @@ UIAlertAction* defaultAction;
         [self presentViewController:alert animated:YES completion:nil];
     } else {
         email = emailText.text;
+        uid = authData.uid;
         [self loadData];
         viewcontroller = [mainstoryboard instantiateViewControllerWithIdentifier:@"myGroupsViewController"];
         [self presentViewController:viewcontroller animated:YES completion:nil];
@@ -123,21 +124,32 @@ UIAlertAction* defaultAction;
         [self presentViewController:alert animated:YES completion:nil];
     } else {
         email = enterEmailText.text;
+        uid = firebase.authData.uid;
         [self loadData];
         viewcontroller = [mainstoryboard instantiateViewControllerWithIdentifier:@"myGroupsViewController"];
         [self presentViewController:viewcontroller animated:YES completion:nil];
+        NSDictionary *user_info = @{
+                                    @"name" : @"new user",
+                                    @"email" : email
+                                    };
+        NSDictionary *new_user = @{uid : user_info};
+        [users_ref updateChildValues:new_user];
     }
     }];
     }
     
 }
 
+- (IBAction)signOut:(id)sender{
+    [firebase unauth];
+}
+
 - (IBAction)keyboardExit:(id)sender{} //dismiss keyboard
 
 
 - (void) loadData{
-    if(email!=nil){
-        users = [users_ref childByAppendingPath:email];
+    if(uid!=nil){
+        users = [users_ref childByAppendingPath:uid];
         [users observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
             if(!snapshot.exists){
                 NSLog(@"user info not found");
@@ -150,17 +162,7 @@ UIAlertAction* defaultAction;
     }
 }
 
-- (NSString *) convertEmail:(NSString *) email{
-    NSString *convertedEmail;
-    char c;
-    for(int i = 0; i < email.length; ++i){
-        c =[email characterAtIndex:i];
-        if((c > 47 && c < 58)||(c > 64 && c < 91)||(c > 96 && c < 123)||c == '_'){
-            
-        }
-    }
-    return convertedEmail;
-}
+
 
 - (IBAction)resetPassword:(id)sender{
     [firebase resetPasswordForUser:resetPasswordText.text withCompletionBlock:^(NSError *error) {

@@ -21,5 +21,6 @@
 - (IBAction)signIn:(id)sender;
 - (IBAction)signUp:(id)sender;
 - (IBAction)resetPassword:(id)sender;
+- (IBAction)signOut:(id)sender;
 @end
 

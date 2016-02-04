@@ -373,6 +373,7 @@ send you the link to reset your password.</string>
                                             <rect key="frame" x="8" y="27" width="92" height="28"/>
                                         </variation>
                                         <connections>
+                                            <action selector="signOut:" destination="qix-Aq-Vg8" eventType="touchUpInside" id="f4C-Dv-Pcb"/>
                                             <segue destination="BYZ-38-t0r" kind="show" id="gMt-aE-nju"/>
                                         </connections>
                                     </button>
@@ -1339,10 +1340,10 @@ send you the link to reset your password.</string>
         <image name="1169645.jpg" width="634" height="368"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GHt-XF-6D7"/>
-        <segue reference="nLv-ED-4IM"/>
-        <segue reference="R1p-6J-qRD"/>
+        <segue reference="gMt-aE-nju"/>
         <segue reference="okZ-j2-4QY"/>
-        <segue reference="8Ue-zy-tdF"/>
+        <segue reference="eDG-sU-cWG"/>
+        <segue reference="u1L-c5-W4l"/>
+        <segue reference="R1p-6J-qRD"/>
     </inferredMetricsTieBreakers>
 </document>
