@@ -16,8 +16,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *showInfo;
 @property (weak, nonatomic) IBOutlet UITextField *groupNameText;
 @property (weak, nonatomic) IBOutlet UITextField *maxPeopleText;
+@property (weak, nonatomic) IBOutlet UITextField *resetPasswordText;
 - (IBAction)showGroupInfo:(id)sender;
 - (IBAction)signIn:(id)sender;
 - (IBAction)signUp:(id)sender;
+- (IBAction)resetPassword:(id)sender;
 @end
 

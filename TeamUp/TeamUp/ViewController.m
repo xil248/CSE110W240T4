@@ -13,7 +13,7 @@
 @end
 
 @implementation ViewController
-@synthesize emailText, passwordText, enterEmailText, enterPasswordText, confirmPasswordText, showInfo, groupNameText, maxPeopleText;
+@synthesize emailText, passwordText, enterEmailText, enterPasswordText, confirmPasswordText, showInfo, groupNameText, maxPeopleText, resetPasswordText;
 
 UILabel *info;
 UIButton *closeInfo;
@@ -135,12 +135,22 @@ UIAlertAction* defaultAction;
                 return;
             }else{
             name = snapshot.value[@"name"];
-            NSLog(@"name:");
-            NSLog(name);
-            NSLog(@"end");
+            //do something
             }
         }];
     }
+}
+
+- (IBAction)resetPassword:(id)sender{
+    [firebase resetPasswordForUser:resetPasswordText.text withCompletionBlock:^(NSError *error) {
+        if (error) {
+            NSLog(@"error when resetting password");
+            [resetPasswordText setText:@"error occured"];
+        } else {
+            NSLog(@"succeed sending resetting password");
+            [resetPasswordText setText:@"sent"];
+        }
+    }];
 }
 
 @end

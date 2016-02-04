@@ -8,7 +8,7 @@
         <!--forgetPassword-->
         <scene sceneID="5R1-Q3-ZMv">
             <objects>
-                <viewController title="forgetPassword" id="Uw3-oj-QIO" sceneMemberID="viewController">
+                <viewController title="forgetPassword" id="Uw3-oj-QIO" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iep-lw-9EZ"/>
                         <viewControllerLayoutGuide type="bottom" id="bVA-Tb-fpp"/>
@@ -42,12 +42,27 @@
                                             <rect key="frame" x="113" y="23" width="175" height="29"/>
                                         </variation>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Fo-Ic-SGi">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="Send">
+                                            <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                            <rect key="frame" x="310" y="18" width="59" height="38"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="resetPassword:" destination="Uw3-oj-QIO" eventType="touchUpInside" id="qOJ-eD-wr4"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.53333333329999999" green="0.75686274509999996" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="yPO-Fw-Z5x"/>
                                         <exclude reference="h1f-QL-ahA"/>
+                                        <exclude reference="1Fo-Ic-SGi"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -55,6 +70,7 @@
                                     <mask key="subviews">
                                         <include reference="yPO-Fw-Z5x"/>
                                         <include reference="h1f-QL-ahA"/>
+                                        <include reference="1Fo-Ic-SGi"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -108,10 +124,13 @@ send you the link to reset your password.</string>
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="resetPasswordText" destination="vqv-Nk-NcR" id="MUw-sY-okc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Era-z2-4E9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-261" y="-229.5"/>
+            <point key="canvasLocation" x="-261.75" y="-229.5"/>
         </scene>
         <!--signIn-->
         <scene sceneID="tne-QT-ifu">
@@ -871,6 +890,19 @@ send you the link to reset your password.</string>
                                     <action selector="signUp:" destination="gQI-44-T19" eventType="touchUpInside" id="ri2-vE-lQz"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDb-qI-Zvk">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title=" Back">
+                                    <color key="titleColor" red="0.24705882352941178" green="0.396078431372549" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="20" width="66" height="50"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="kOo-d2-xr8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.53333333333333333" green="0.75686274509803919" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -880,6 +912,7 @@ send you the link to reset your password.</string>
                                 <exclude reference="eRt-wc-nZ7"/>
                                 <exclude reference="Vru-PW-Fsm"/>
                                 <exclude reference="LA9-QN-N9V"/>
+                                <exclude reference="ZDb-qI-Zvk"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -889,6 +922,7 @@ send you the link to reset your password.</string>
                                 <include reference="eRt-wc-nZ7"/>
                                 <include reference="Vru-PW-Fsm"/>
                                 <include reference="LA9-QN-N9V"/>
+                                <include reference="ZDb-qI-Zvk"/>
                             </mask>
                         </variation>
                     </view>
@@ -901,7 +935,7 @@ send you the link to reset your password.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uTr-md-jN6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="512.25" y="504.375"/>
+            <point key="canvasLocation" x="512.25" y="503.5"/>
         </scene>
         <!--searchClass-->
         <scene sceneID="EZw-gh-Qjf">
@@ -1307,8 +1341,8 @@ send you the link to reset your password.</string>
     <inferredMetricsTieBreakers>
         <segue reference="GHt-XF-6D7"/>
         <segue reference="R1p-6J-qRD"/>
-        <segue reference="u1L-c5-W4l"/>
-        <segue reference="okZ-j2-4QY"/>
-        <segue reference="eDG-sU-cWG"/>
+        <segue reference="nLv-ED-4IM"/>
+        <segue reference="gho-CR-JMk"/>
+        <segue reference="8Ue-zy-tdF"/>
     </inferredMetricsTieBreakers>
 </document>
