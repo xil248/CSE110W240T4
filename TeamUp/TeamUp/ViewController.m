@@ -13,7 +13,7 @@
 @end
 
 @implementation ViewController
-@synthesize emailText, passwordText, enterEmailText, enterPasswordText, confirmPasswordText, showInfo, groupNameText, maxPeopleText, resetPasswordText, memberMajorText,memberNameText,memberYearText, searchText, tableView, addCourseText, addProfText, addTermText;
+@synthesize emailText, passwordText, enterEmailText, enterPasswordText, confirmPasswordText, groupNameText, maxPeopleText, resetPasswordText, memberMajorText,memberNameText,memberYearText, searchText, tableView, addCourseText, addProfText, addTermText, addSectionText;
 
 Firebase *firebase;
 Firebase *users_ref;
@@ -22,8 +22,8 @@ Firebase *class_ref;
 Firebase *class;
 Firebase *group_ref;
 Firebase *group;
-UILabel *info;
-UIButton *closeInfo;
+//UILabel *info;
+//UIButton *closeInfo;
 UIStoryboard *mainstoryboard;
 UIViewController *viewcontroller;
 NSString *email;
@@ -33,6 +33,7 @@ UIAlertAction* defaultAction;
 NSString *year;
 NSString *major;
 NSDictionary *classes;
+NSArray<NSString*> *allClassNames;
 NSMutableDictionary *result;
 
 - (void)viewDidLoad {
@@ -61,12 +62,13 @@ NSMutableDictionary *result;
     [class_ref observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
         [self.tableView reloadData];
         classes = snapshot.value;
+        allClassNames = classes.allKeys;
     }];
-    info = [[UILabel alloc] initWithFrame:CGRectMake(37, 166, 301, 280)];
-    info.text = @"AAAA";
-    info.backgroundColor = [UIColor colorWithRed:230/255 green:230/255 blue:230/255 alpha:0.15];
+//    info = [[UILabel alloc] initWithFrame:CGRectMake(37, 166, 301, 280)];
+//    info.text = @"AAAA";
+//    info.backgroundColor = [UIColor colorWithRed:230/255 green:230/255 blue:230/255 alpha:0.15];
     // initialze the closeinfo button
-    closeInfo = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 375, 667)];
+//    closeInfo = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 375, 667)];
     
     //initialization ends here
     //not run-time initialization
@@ -82,21 +84,21 @@ NSMutableDictionary *result;
   // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)showGroupInfo:(id)sender {
-    [self.view addSubview:closeInfo];
-    [self.view addSubview:info];
-    [closeInfo addTarget:self action:@selector(btnClicked) forControlEvents:UIControlEventTouchUpInside];
-}
-
-- (void)btnClicked {
-    [info removeFromSuperview];
-    [closeInfo removeFromSuperview];
-}
+//- (IBAction)showGroupInfo:(id)sender {
+//    [self.view addSubview:closeInfo];
+//    [self.view addSubview:info];
+//    [closeInfo addTarget:self action:@selector(btnClicked) forControlEvents:UIControlEventTouchUpInside];
+//}
+//
+//- (void)btnClicked {
+//    [info removeFromSuperview];
+//    [closeInfo removeFromSuperview];
+//}
 
 - (IBAction)signIn:(id)sender{
     //test approach
-    emailText.text = @"test@ucsd.edu";
-    passwordText.text = @"test";
+//    emailText.text = @"test@ucsd.edu";
+//    passwordText.text = @"test";
     [firebase authUser:emailText.text password:passwordText.text withCompletionBlock:^(NSError *error, FAuthData *authData) {
     if (error) {
         NSString *errorMessage = [error localizedDescription];
@@ -224,17 +226,20 @@ NSMutableDictionary *result;
 - (IBAction)searchClasses:(id)sender{
     [result removeAllObjects];
     NSString *toSearch = searchText.text;
+    NSCharacterSet *notAllowedChars = [[NSCharacterSet characterSetWithCharactersInString:@"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"] invertedSet];
+    toSearch = [[toSearch componentsSeparatedByCharactersInSet:notAllowedChars] componentsJoinedByString:@""];
+    NSString *index = @"";
+    int number = 0;
     if (toSearch.length > 0) {
         class = [class_ref childByAppendingPath:toSearch];
-        if(class){
-            NSLog(@"class is in fact not null");
-            [class observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
-                if(snapshot.exists){
-                    NSLog(@"snapshop in fact exists");
-                    [result setValue:snapshot.value[@"term"] forKey:toSearch];
-                    [self.tableView reloadData];
-                }
-            }];
+        for(int i = 0; i < allClassNames.count; ++i){
+            if([allClassNames[i] containsString:toSearch] || [toSearch containsString:allClassNames[i]]){
+                index = @"";
+                index = [index stringByAppendingFormat:@"%d", number++];
+                [result setValue:allClassNames[i] forKey:index];
+                NSLog(@"result writtten with key:%@ and value: %@", index, allClassNames[i]);
+                [self.tableView reloadData];
+            }
         }
     }
     NSLog(@"updated result has: %lu", (unsigned long)result.count);
@@ -245,11 +250,15 @@ NSMutableDictionary *result;
     NSDictionary *new_class_info = @{@"name":addCourseText.text,
                                 @"prof" :addProfText.text,
                                 @"term" :addTermText.text,
+                                @"section" : addSectionText.text,
                                 @"group" : @""
                                 };
-    NSDictionary *new_class = @{addCourseText.text : new_class_info};
+    NSString *newClassName = addCourseText.text;
+    newClassName = [newClassName stringByAppendingFormat:@"%@%@", addTermText.text, addSectionText.text ];
+    NSDictionary *new_class = @{newClassName : new_class_info};
     [class_ref updateChildValues:new_class];
-    
+    viewcontroller = [mainstoryboard instantiateViewControllerWithIdentifier:@"searchClassViewController"];
+    [self presentViewController:viewcontroller animated:YES completion:nil];
 }
 
 #pragma mark - Table view data source
@@ -279,11 +288,20 @@ NSMutableDictionary *result;
         cell.textLabel.font = [UIFont systemFontOfSize:18];
         cell.textLabel.numberOfLines = 0;
     }
-    cell.textLabel.text = searchText.text;
-    cell.detailTextLabel.text = result[searchText.text];
-    
+    NSString *number = @"";
+    number = [number stringByAppendingFormat:@"%ld",(long)index.row ];
+    NSLog(@"result read with key:%@ and value: %@", number, result[number]);
+    cell.textLabel.text = [[classes valueForKey:result[number]] valueForKey:@"name"];
+    cell.detailTextLabel.text = [[classes valueForKey:result[number]] valueForKey:@"term"];
     return cell;
 }
 
-
+-(void) tableView:(UITableView *)table didSelectRowAtIndexPath:(NSIndexPath*)indexPath{
+    UITableViewCell *cell = [table cellForRowAtIndexPath:indexPath];
+    if(cell!=nil){
+        NSLog(@"cell is not null!");
+        viewcontroller = [mainstoryboard instantiateViewControllerWithIdentifier:@"allGroupsForClassViewController"];
+        [self presentViewController:viewcontroller animated:YES completion:nil];
+    }
+}
 @end
