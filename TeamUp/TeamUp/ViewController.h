@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextField *emailText;
 @property (weak, nonatomic) IBOutlet UITextField *passwordText;
 @property (weak, nonatomic) IBOutlet UITextField *enterEmailText;
@@ -20,11 +20,19 @@
 @property (weak, nonatomic) IBOutlet UITextField *memberNameText;
 @property (weak, nonatomic) IBOutlet UITextField *memberMajorText;
 @property (weak, nonatomic) IBOutlet UITextField *memberYearText;
+@property (weak, nonatomic) IBOutlet UITextField *addProfText;
+@property (weak, nonatomic) IBOutlet UITextField *searchText;
+@property (weak, nonatomic) IBOutlet UITextField *addCourseText;
+@property (weak, nonatomic) IBOutlet UITextField *addTermText;
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)showGroupInfo:(id)sender;
 - (IBAction)signIn:(id)sender;
 - (IBAction)signUp:(id)sender;
 - (IBAction)resetPassword:(id)sender;
 - (IBAction)signOut:(id)sender;
 - (IBAction)memberInfoEditor:(id)sender;
+- (IBAction)searchClasses:(id)sender;
+- (IBAction)newClass:(id)sender;
 @end
 

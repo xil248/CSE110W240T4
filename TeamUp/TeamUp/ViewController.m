@@ -13,11 +13,15 @@
 @end
 
 @implementation ViewController
-@synthesize emailText, passwordText, enterEmailText, enterPasswordText, confirmPasswordText, showInfo, groupNameText, maxPeopleText, resetPasswordText, memberMajorText,memberNameText,memberYearText;
+@synthesize emailText, passwordText, enterEmailText, enterPasswordText, confirmPasswordText, showInfo, groupNameText, maxPeopleText, resetPasswordText, memberMajorText,memberNameText,memberYearText, searchText, tableView, addCourseText, addProfText, addTermText;
 
 Firebase *firebase;
 Firebase *users_ref;
 Firebase *users;
+Firebase *class_ref;
+Firebase *class;
+Firebase *group_ref;
+Firebase *group;
 UILabel *info;
 UIButton *closeInfo;
 UIStoryboard *mainstoryboard;
@@ -28,10 +32,12 @@ NSString *name;
 UIAlertAction* defaultAction;
 NSString *year;
 NSString *major;
-
+NSDictionary *classes;
+NSMutableDictionary *result;
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+    [self.tableView reloadData];
     // Do any additional setup after loading the view, typically from a nib.
     self.emailText.borderStyle = UITextBorderStyleRoundedRect;
     self.passwordText.borderStyle = UITextBorderStyleRoundedRect;
@@ -50,6 +56,12 @@ NSString *major;
     mainstoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     firebase = [[Firebase alloc] initWithUrl:@"https://resplendent-inferno-8485.firebaseio.com"];
     users_ref = [firebase childByAppendingPath:@"users"];
+    class_ref = [firebase childByAppendingPath:@"classes"];
+    result = [[NSMutableDictionary alloc]initWithCapacity:20];
+    [class_ref observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+        [self.tableView reloadData];
+        classes = snapshot.value;
+    }];
     info = [[UILabel alloc] initWithFrame:CGRectMake(37, 166, 301, 280)];
     info.text = @"AAAA";
     info.backgroundColor = [UIColor colorWithRed:230/255 green:230/255 blue:230/255 alpha:0.15];
@@ -61,19 +73,6 @@ NSString *major;
     memberNameText.text = (name == nil)? @"" : name;
     memberMajorText.text = (major == nil)? @"" : major;
     memberYearText.text = (year == nil)? @"" : year;
-//    NSDictionary *test = @{
-//                                    @"name" : @"test",
-//                                    @"email": @"test@ucsd.edu"
-//                                    };
-//    NSDictionary *jiz010 = @{
-//                               @"name" : @"jiasheng zhu",
-//                               @"email": @"jiz010@ucsd.edu"
-//                               };
-//    NSDictionary *users = @{
-//                            @"test_ucsdedu": test,
-//                            @"jiz010ucsdedu": jiz010
-//                            };
-//    [users_ref setValue: users];
     //end "not run-time initialization"
 
 }
@@ -95,6 +94,9 @@ NSString *major;
 }
 
 - (IBAction)signIn:(id)sender{
+    //test approach
+    emailText.text = @"test@ucsd.edu";
+    passwordText.text = @"test";
     [firebase authUser:emailText.text password:passwordText.text withCompletionBlock:^(NSError *error, FAuthData *authData) {
     if (error) {
         NSString *errorMessage = [error localizedDescription];
@@ -118,14 +120,10 @@ NSString *major;
         NSLog(@"user should have signed in");
     }
     }];
-//    memberYearText.text = year;
-//    memberNameText.text = name;
-//    memberMajorText.text = major;
 }
 
 - (IBAction)signUp:(id)sender{
-    NSString * domain = [enterEmailText.text substringFromIndex:MAX((int)[enterEmailText.text length]-8, 0)];
-    
+    NSString * domain = [enterEmailText.text substringFromIndex:MAX((int)[enterEmailText.text length]-8, 0)];    
     if (![domain isEqualToString:@"ucsd.edu"]) {
          UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"You must use a ucsd email!" preferredStyle:UIAlertControllerStyleAlert];
         [alert addAction:defaultAction];
@@ -168,7 +166,6 @@ NSString *major;
     }
     }];
     }
-    
 }
 
 - (IBAction)signOut:(id)sender{
@@ -199,8 +196,6 @@ NSString *major;
     }
 }
 
-
-
 - (IBAction)resetPassword:(id)sender{
     [firebase resetPasswordForUser:resetPasswordText.text withCompletionBlock:^(NSError *error) {
         if (error) {
@@ -217,9 +212,7 @@ NSString *major;
     name = memberNameText.text;
     year = memberYearText.text;
     major = memberMajorText.text;
-    NSLog(@"major: %@; name: %@; year: %@", major, name, year);
-    NSDictionary *user_info = @{
-                                @"name" : name,
+    NSDictionary *user_info = @{@"name" : name,
                                 @"email" : email,
                                 @"major" : major,
                                 @"year" : year
@@ -227,5 +220,70 @@ NSString *major;
     NSDictionary *new_user = @{uid : user_info};
     [users_ref updateChildValues:new_user];
 }
+
+- (IBAction)searchClasses:(id)sender{
+    [result removeAllObjects];
+    NSString *toSearch = searchText.text;
+    if (toSearch.length > 0) {
+        class = [class_ref childByAppendingPath:toSearch];
+        if(class){
+            NSLog(@"class is in fact not null");
+            [class observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+                if(snapshot.exists){
+                    NSLog(@"snapshop in fact exists");
+                    [result setValue:snapshot.value[@"term"] forKey:toSearch];
+                    [self.tableView reloadData];
+                }
+            }];
+        }
+    }
+    NSLog(@"updated result has: %lu", (unsigned long)result.count);
+    [self.tableView reloadData];
+}
+
+- (IBAction)newClass:(id)sender{
+    NSDictionary *new_class_info = @{@"name":addCourseText.text,
+                                @"prof" :addProfText.text,
+                                @"term" :addTermText.text,
+                                @"group" : @""
+                                };
+    NSDictionary *new_class = @{addCourseText.text : new_class_info};
+    [class_ref updateChildValues:new_class];
+    
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView*)tableView
+{
+    // We only have one section in our table view.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // This is the number of chat messages.
+    //NSLog(@"result has %lu", (unsigned long)result.count);
+    return result.count;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 44;
+}
+
+- (UITableViewCell*)tableView:(UITableView*)table cellForRowAtIndexPath:(NSIndexPath *)index
+{
+    static NSString *CellIdentifier = @"Class";
+    UITableViewCell *cell = [table dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell.textLabel.font = [UIFont systemFontOfSize:18];
+        cell.textLabel.numberOfLines = 0;
+    }
+    cell.textLabel.text = searchText.text;
+    cell.detailTextLabel.text = result[searchText.text];
+    
+    return cell;
+}
+
 
 @end

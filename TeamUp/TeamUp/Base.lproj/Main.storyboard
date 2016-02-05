@@ -96,7 +96,7 @@ bibibi</string>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VrJ-vB-qp4">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <string key="text">Enter your UCSD E-mail, we will
-send you the link to reset your password.</string>
+send you a temporary password.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -130,7 +130,7 @@ send you the link to reset your password.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Era-z2-4E9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-261.75" y="-229.5"/>
+            <point key="canvasLocation" x="-17.25" y="-242.5"/>
         </scene>
         <!--signIn-->
         <scene sceneID="tne-QT-ifu">
@@ -443,7 +443,7 @@ send you the link to reset your password.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c6f-Dw-LqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-812.25" y="154.125"/>
+            <point key="canvasLocation" x="-908.25" y="196.5"/>
         </scene>
         <!--allGroupsForClass-->
         <scene sceneID="o5b-Zw-x3b">
@@ -941,7 +941,7 @@ send you the link to reset your password.</string>
         <!--searchClass-->
         <scene sceneID="EZw-gh-Qjf">
             <objects>
-                <viewController title="searchClass" id="JD1-bk-77F" sceneMemberID="viewController">
+                <viewController title="searchClass" id="JD1-bk-77F" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TX0-pB-bZj"/>
                         <viewControllerLayoutGuide type="bottom" id="YSB-DH-WKN"/>
@@ -950,89 +950,79 @@ send you the link to reset your password.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" searchBarStyle="prominent" placeholder="eg. CSE110" translatesAutoresizingMaskIntoConstraints="NO" id="rRa-na-a78">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <textInputTraits key="textInputTraits" spellCheckingType="yes" keyboardAppearance="light"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l5W-PF-4n3">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="65" width="400" height="44"/>
-                                </variation>
-                            </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAC-jd-ziv">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="cse110 wi16 test button"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="105" y="179" width="161" height="30"/>
+                                    <rect key="frame" x="0.0" y="143" width="375" height="524"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="Sn0-nN-G2J" kind="show" id="R1p-6J-qRD"/>
+                                    <outlet property="dataSource" destination="JD1-bk-77F" id="Ygp-nn-QmV"/>
+                                    <outlet property="delegate" destination="JD1-bk-77F" id="22U-4P-bwU"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xX8-FL-yo5">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="15" y="51" width="45" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="qix-Aq-Vg8" kind="show" id="Wb6-fH-OsW"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yIs-fe-CQU">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUx-wH-PvI">
-                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
-                                        <state key="normal" title="Back">
-                                            <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="8" y="16" width="86" height="38"/>
-                                        </variation>
-                                        <connections>
-                                            <segue destination="qix-Aq-Vg8" kind="show" id="gho-CR-JMk"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search Classes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vcn-zS-Fng">
-                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="23"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="126" y="24" width="163" height="21"/>
-                                        </variation>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.53333333333333333" green="0.75686274509803919" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="mUx-wH-PvI"/>
-                                        <exclude reference="Vcn-zS-Fng"/>
-                                    </mask>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufm-na-QHK">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Course not found">
+                                    <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="231" y="51" width="124" height="30"/>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
-                                    <mask key="subviews">
-                                        <include reference="mUx-wH-PvI"/>
-                                        <include reference="Vcn-zS-Fng"/>
-                                    </mask>
+                                <connections>
+                                    <segue destination="JYW-I3-O00" kind="show" id="hWH-25-RBq"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Search here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hDn-mv-zd1">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="107" width="335" height="36"/>
                                 </variation>
-                            </view>
+                                <connections>
+                                    <action selector="searchClasses:" destination="JD1-bk-77F" eventType="editingChanged" id="UVr-NY-dwj"/>
+                                    <action selector="searchClasses:" destination="JD1-bk-77F" eventType="editingDidEndOnExit" id="cuR-Mf-HDJ"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.85882352941176465" green="0.92941176470588238" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="rRa-na-a78"/>
-                                <exclude reference="bAC-jd-ziv"/>
-                                <exclude reference="yIs-fe-CQU"/>
+                                <exclude reference="l5W-PF-4n3"/>
+                                <exclude reference="xX8-FL-yo5"/>
+                                <exclude reference="ufm-na-QHK"/>
+                                <exclude reference="hDn-mv-zd1"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="rRa-na-a78"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="bAC-jd-ziv"/>
-                                <include reference="yIs-fe-CQU"/>
+                                <include reference="l5W-PF-4n3"/>
+                                <include reference="xX8-FL-yo5"/>
+                                <include reference="ufm-na-QHK"/>
+                                <include reference="hDn-mv-zd1"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="searchDisplayController" destination="Rxr-Ym-l1X" id="OsI-WE-Clu"/>
+                        <outlet property="searchDisplayController" destination="3yU-rY-PiN" id="L2H-xk-QIS"/>
+                        <outlet property="searchText" destination="hDn-mv-zd1" id="0w7-cR-KBv"/>
+                        <outlet property="tableView" destination="l5W-PF-4n3" id="ltl-f0-Yrf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V96-np-VA5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1044,13 +1034,162 @@ send you the link to reset your password.</string>
                         <outlet property="searchResultsDelegate" destination="JD1-bk-77F" id="8o1-su-az0"/>
                     </connections>
                 </searchDisplayController>
+                <searchDisplayController id="c9J-Ca-LCp">
+                    <connections>
+                        <outlet property="delegate" destination="JD1-bk-77F" id="QPg-Vi-1ZX"/>
+                        <outlet property="searchContentsController" destination="JD1-bk-77F" id="67R-9F-dUA"/>
+                        <outlet property="searchResultsDataSource" destination="JD1-bk-77F" id="soq-78-Ym3"/>
+                        <outlet property="searchResultsDelegate" destination="JD1-bk-77F" id="Mgi-a2-bJW"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="24Z-LK-E8K">
+                    <connections>
+                        <outlet property="delegate" destination="JD1-bk-77F" id="Tfg-WW-ZFd"/>
+                        <outlet property="searchContentsController" destination="JD1-bk-77F" id="eX6-6a-9iN"/>
+                        <outlet property="searchResultsDataSource" destination="JD1-bk-77F" id="Wor-uz-WaR"/>
+                        <outlet property="searchResultsDelegate" destination="JD1-bk-77F" id="Naj-9M-kvT"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="3yU-rY-PiN">
+                    <connections>
+                        <outlet property="delegate" destination="JD1-bk-77F" id="uaD-Ao-Ma0"/>
+                        <outlet property="searchContentsController" destination="JD1-bk-77F" id="jk5-fF-0dZ"/>
+                        <outlet property="searchResultsDataSource" destination="JD1-bk-77F" id="M7S-DE-kYR"/>
+                        <outlet property="searchResultsDelegate" destination="JD1-bk-77F" id="n30-OS-Ph8"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="453.75" y="1205.625"/>
+            <point key="canvasLocation" x="453.75" y="1205.5"/>
+        </scene>
+        <!--addCourse-->
+        <scene sceneID="zfW-ji-vNS">
+            <objects>
+                <viewController title="addCourse" id="JYW-I3-O00" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YLv-AT-7ug"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Da-VF-CwF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xNJ-aE-syp">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkT-Dx-0HJ">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="60" y="183" width="109" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Professor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBQ-e2-SFO">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="91" y="251" width="78" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Term:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zh-TC-bHO">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="125" y="318" width="44" height="21"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Put name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s2d-n4-6ec">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="193" y="180" width="173" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Put prof's name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E3b-z5-wwv">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="193" y="247" width="173" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Put term here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ABs-rU-fk0">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="193" y="314" width="173" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSf-JM-sB0">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="28" y="55" width="45" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="JD1-bk-77F" kind="show" id="8BB-u2-kuq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Zp-1b-D0j">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Update">
+                                    <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="161" y="377" width="53" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="newClass:" destination="JYW-I3-O00" eventType="touchUpInside" id="KJN-Em-svS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.85882352939999995" green="0.92941176469999998" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="qkT-Dx-0HJ"/>
+                                <exclude reference="zBQ-e2-SFO"/>
+                                <exclude reference="9zh-TC-bHO"/>
+                                <exclude reference="s2d-n4-6ec"/>
+                                <exclude reference="E3b-z5-wwv"/>
+                                <exclude reference="ABs-rU-fk0"/>
+                                <exclude reference="bSf-JM-sB0"/>
+                                <exclude reference="6Zp-1b-D0j"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="qkT-Dx-0HJ"/>
+                                <include reference="zBQ-e2-SFO"/>
+                                <include reference="9zh-TC-bHO"/>
+                                <include reference="s2d-n4-6ec"/>
+                                <include reference="E3b-z5-wwv"/>
+                                <include reference="ABs-rU-fk0"/>
+                                <include reference="bSf-JM-sB0"/>
+                                <include reference="6Zp-1b-D0j"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="addCourseText" destination="s2d-n4-6ec" id="5lV-bx-h03"/>
+                        <outlet property="addProfText" destination="E3b-z5-wwv" id="DBR-oS-oLR"/>
+                        <outlet property="addTermText" destination="ABs-rU-fk0" id="Cff-F1-rK9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="89r-Ye-Dsa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1649.25" y="1139.5"/>
         </scene>
         <!--groupDetailAsMember-->
         <scene sceneID="U6g-nl-02B">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hdB-4g-Rdh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="groupDetailAsMember" id="6Y2-d6-1gv" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wBw-cC-WGl"/>
@@ -1188,6 +1327,7 @@ send you the link to reset your password.</string>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hdB-4g-Rdh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="888.75" y="85.5"/>
         </scene>
@@ -1288,7 +1428,7 @@ send you the link to reset your password.</string>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Put your name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aWO-5A-eYr">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="152" y="211" width="168" height="30"/>
                                 </variation>
@@ -1299,7 +1439,7 @@ send you the link to reset your password.</string>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Put your major here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ne1-un-cYg">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="152" y="277" width="168" height="30"/>
                                 </variation>
@@ -1310,7 +1450,7 @@ send you the link to reset your password.</string>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Put your year here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZUz-Nf-TdA">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="152" y="338" width="168" height="30"/>
                                 </variation>
@@ -1354,17 +1494,16 @@ send you the link to reset your password.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ARf-zb-gd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1386.75" y="153.5"/>
+            <point key="canvasLocation" x="-1542.75" y="146.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="1169645.jpg" width="634" height="368"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gMt-aE-nju"/>
+        <segue reference="8BB-u2-kuq"/>
         <segue reference="tPV-cf-Y4b"/>
         <segue reference="eDG-sU-cWG"/>
-        <segue reference="u1L-c5-W4l"/>
-        <segue reference="R1p-6J-qRD"/>
+        <segue reference="kOo-d2-xr8"/>
     </inferredMetricsTieBreakers>
 </document>
