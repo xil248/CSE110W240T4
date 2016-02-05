@@ -59,8 +59,8 @@ NSString *major;
     //initialization ends here
     //not run-time initialization
     memberNameText.text = (name == nil)? @"" : name;
+    memberMajorText.text = (major == nil)? @"" : major;
     memberYearText.text = (year == nil)? @"" : year;
-    memberMajorText.text = (major == nil)? @"" : major;   // << this is a compromise, change it if could
 //    NSDictionary *test = @{
 //                                    @"name" : @"test",
 //                                    @"email": @"test@ucsd.edu"
@@ -163,7 +163,8 @@ NSString *major;
         NSDictionary *new_user = @{uid : user_info};
         [users_ref updateChildValues:new_user];
         NSLog(@"user should have signed up");
-        [self memberInfoEditor:nil];  //test if this will cause an error
+        viewcontroller = [mainstoryboard instantiateViewControllerWithIdentifier:@"memberDetailsViewController"];
+        [self presentViewController:viewcontroller animated:YES completion:nil];
     }
     }];
     }
@@ -213,13 +214,18 @@ NSString *major;
 }
 
 - (IBAction)memberInfoEditor:(id)sender{
-    viewcontroller = [mainstoryboard instantiateViewControllerWithIdentifier:@"memberDetailsViewController"];
-    [self presentViewController:viewcontroller animated:YES completion:nil];
-    NSLog(@"%@ %@ %@", name, major, year);
-    memberNameText.text = name;
-    memberYearText.text = year;
-    memberMajorText.text = major;
-    
+    name = memberNameText.text;
+    year = memberYearText.text;
+    major = memberMajorText.text;
+    NSLog(@"major: %@; name: %@; year: %@", major, name, year);
+    NSDictionary *user_info = @{
+                                @"name" : name,
+                                @"email" : email,
+                                @"major" : major,
+                                @"year" : year
+                                };
+    NSDictionary *new_user = @{uid : user_info};
+    [users_ref updateChildValues:new_user];
 }
 
 @end

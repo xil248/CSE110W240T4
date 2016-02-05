@@ -405,8 +405,7 @@ send you the link to reset your password.</string>
                                     <rect key="frame" x="272" y="617" width="77" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="memberInfoEditor:" destination="qix-Aq-Vg8" eventType="touchUpInside" id="CTa-QG-X06"/>
-                                    <segue destination="e0j-yR-2gV" kind="show" id="UJs-Wt-A6r"/>
+                                    <segue destination="e0j-yR-2gV" kind="show" id="JZL-so-WAM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1220,17 +1219,33 @@ send you the link to reset your password.</string>
                                             <segue destination="qix-Aq-Vg8" kind="show" id="tPV-cf-Y4b"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaK-y9-wov">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <state key="normal" title="update">
+                                            <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="298" y="39" width="60" height="34"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="memberInfoEditor:" destination="e0j-yR-2gV" eventType="touchUpInside" id="Nry-JK-hqP"/>
+                                            <segue destination="qix-Aq-Vg8" kind="show" id="jc7-40-waa"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.53333333329999999" green="0.75686274509999996" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="ChG-ci-uut"/>
+                                        <exclude reference="gaK-y9-wov"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="-15" width="401" height="81"/>
                                     <mask key="subviews">
                                         <include reference="ChG-ci-uut"/>
+                                        <include reference="gaK-y9-wov"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -1278,7 +1293,7 @@ send you the link to reset your password.</string>
                                     <rect key="frame" x="152" y="211" width="168" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="memberInfoEditor:" destination="e0j-yR-2gV" eventType="editingDidEnd" id="rNI-T7-Xnx"/>
+                                    <action selector="keyboardExit:" destination="e0j-yR-2gV" eventType="editingDidEndOnExit" id="TAJ-X5-8eU"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Put your major here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ne1-un-cYg">
@@ -1289,7 +1304,7 @@ send you the link to reset your password.</string>
                                     <rect key="frame" x="152" y="277" width="168" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="memberInfoEditor:" destination="e0j-yR-2gV" eventType="editingDidEnd" id="Gjh-w2-cSd"/>
+                                    <action selector="keyboardExit:" destination="e0j-yR-2gV" eventType="editingDidEndOnExit" id="cfJ-b4-Nky"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Put your year here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZUz-Nf-TdA">
@@ -1300,7 +1315,7 @@ send you the link to reset your password.</string>
                                     <rect key="frame" x="152" y="338" width="168" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="memberInfoEditor:" destination="e0j-yR-2gV" eventType="editingDidEnd" id="BAR-dO-x1b"/>
+                                    <action selector="keyboardExit:" destination="e0j-yR-2gV" eventType="editingDidEndOnExit" id="Cln-gj-hlx"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -1346,7 +1361,7 @@ send you the link to reset your password.</string>
         <image name="1169645.jpg" width="634" height="368"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kOo-d2-xr8"/>
+        <segue reference="gMt-aE-nju"/>
         <segue reference="tPV-cf-Y4b"/>
         <segue reference="eDG-sU-cWG"/>
         <segue reference="u1L-c5-W4l"/>
