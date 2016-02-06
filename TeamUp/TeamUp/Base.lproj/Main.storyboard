@@ -1519,10 +1519,10 @@ send you a temporary password.</string>
         <image name="1169645.jpg" width="634" height="368"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eDG-sU-cWG"/>
-        <segue reference="jc7-40-waa"/>
-        <segue reference="ysN-Fc-aia"/>
-        <segue reference="gMt-aE-nju"/>
+        <segue reference="Wb6-fH-OsW"/>
         <segue reference="u1L-c5-W4l"/>
+        <segue reference="gMt-aE-nju"/>
+        <segue reference="eDG-sU-cWG"/>
+        <segue reference="ysN-Fc-aia"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -13,7 +13,7 @@
 @end
 
 @implementation ViewController
-@synthesize emailText, passwordText, enterEmailText, enterPasswordText, confirmPasswordText, groupNameText, maxPeopleText, resetPasswordText, memberMajorText,memberNameText,memberYearText, searchText, tableView, addCourseText, addProfText, addTermText, addSectionText, changeOldPasswordText, changeNewPasswordText, changeComfirmPasswordText, addGroupNameText, addMaxPeopleText;
+@synthesize emailText, passwordText, enterEmailText, enterPasswordText, confirmPasswordText, groupNameText, maxPeopleText, resetPasswordText, memberMajorText,memberNameText,memberYearText, searchText, tableView, addCourseText, addProfText, addTermText, addSectionText, changeOldPasswordText, changeNewPasswordText, changeComfirmPasswordText, addGroupNameText, addMaxPeopleText, isPrivateSwitch;
 
 Firebase *firebase;
 Firebase *users_ref;
@@ -97,8 +97,8 @@ NSMutableDictionary *result;
 
 - (IBAction)signIn:(id)sender{
     //test approach
-//    emailText.text = @"test@ucsd.edu";
-//    passwordText.text = @"test";
+    emailText.text = @"test@ucsd.edu";
+    passwordText.text = @"test";
     [firebase authUser:emailText.text password:passwordText.text withCompletionBlock:^(NSError *error, FAuthData *authData) {
     if (error) {
         NSString *errorMessage = [error localizedDescription];
@@ -272,6 +272,7 @@ NSMutableDictionary *result;
 
 - (IBAction)newClass:(id)sender{
     if([addCourseText.text isEqualToString:@""]||[addProfText.text isEqualToString:@""]||[addTermText.text isEqualToString:@""]||[addSectionText.text isEqualToString:@""])
+        return;
     NSDictionary *new_class_info = @{@"name":addCourseText.text,
                                 @"prof" :addProfText.text,
                                 @"term" :addTermText.text,
@@ -292,8 +293,8 @@ NSMutableDictionary *result;
     NSString *groupuid = [firebase.authData.uid stringByAppendingString:addGroupNameText.text];
     NSString *groupName = addGroupNameText.text;
     NSString *groupNum = addMaxPeopleText.text;
-    BOOL *isPrivate = isPrivate.boolValue;
-    NSArray *teamMember = @{firebase.authData.uid};
+    NSString *isPrivate = isPrivateSwitch.isOn? @"private" : @"public";
+    NSArray<NSString *> *teamMember = [NSArray arrayWithObjects: firebase.authData.uid, nil];
     NSDictionary *new_group_info = @{@"name" : groupName,
                                      @"teammember" : teamMember,
                                      @"leader" : firebase.authData.uid,
@@ -343,8 +344,11 @@ NSMutableDictionary *result;
 -(void) tableView:(UITableView *)table didSelectRowAtIndexPath:(NSIndexPath*)indexPath{
     UITableViewCell *cell = [table cellForRowAtIndexPath:indexPath];
     if(cell!=nil){
-        NSString *classuid = 
-        class = [class_ref childByAppendingPath:<#(NSString *)#>];
+        NSString *number = @"";
+        number = [number stringByAppendingFormat:@"%ld",(long)indexPath.row ];
+        NSString *classuid = result[number];
+        class = [class_ref childByAppendingPath:classuid];
+        NSLog(@"%@", classuid);
         viewcontroller = [mainstoryboard instantiateViewControllerWithIdentifier:@"allGroupsForClassViewController"];
         [self presentViewController:viewcontroller animated:YES completion:nil];
     }
