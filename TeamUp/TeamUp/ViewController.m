@@ -304,7 +304,7 @@ NSMutableDictionary *result;
                                      @"password" : @"password"};
     NSDictionary *new_group = @{groupuid : new_group_info};
     [class updateChildValues:new_group];
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Teah!"
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Yeah!"
                                                                    message:@"created" preferredStyle:UIAlertControllerStyleAlert];
     [alert addAction:defaultAction];
     [self presentViewController:alert animated:YES completion:nil];

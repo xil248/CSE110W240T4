@@ -674,6 +674,16 @@ send you a temporary password.</string>
                                     <rect key="frame" x="128" y="279" width="53" height="21"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tli-e7-CwN">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="40" y="35" width="34" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="Sn0-nN-G2J" kind="show" id="Mi5-L4-kS5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.85882352939999995" green="0.92941176469999998" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -683,6 +693,7 @@ send you a temporary password.</string>
                                 <exclude reference="2Bu-vu-fhB"/>
                                 <exclude reference="0dx-MG-8wZ"/>
                                 <exclude reference="cVc-rX-vZC"/>
+                                <exclude reference="Tli-e7-CwN"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -692,6 +703,7 @@ send you a temporary password.</string>
                                 <include reference="2Bu-vu-fhB"/>
                                 <include reference="0dx-MG-8wZ"/>
                                 <include reference="cVc-rX-vZC"/>
+                                <include reference="Tli-e7-CwN"/>
                             </mask>
                         </variation>
                     </view>
