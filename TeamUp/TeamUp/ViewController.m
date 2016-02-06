@@ -304,6 +304,10 @@ NSMutableDictionary *result;
                                      @"password" : @"password"};
     NSDictionary *new_group = @{groupuid : new_group_info};
     [class updateChildValues:new_group];
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Teah!"
+                                                                   message:@"created" preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 #pragma mark - Table view data source
@@ -347,7 +351,7 @@ NSMutableDictionary *result;
         NSString *number = @"";
         number = [number stringByAppendingFormat:@"%ld",(long)indexPath.row ];
         NSString *classuid = result[number];
-        class = [class_ref childByAppendingPath:classuid];
+        class = [[class_ref childByAppendingPath:classuid] childByAppendingPath:@"group"];
         NSLog(@"%@", classuid);
         viewcontroller = [mainstoryboard instantiateViewControllerWithIdentifier:@"allGroupsForClassViewController"];
         [self presentViewController:viewcontroller animated:YES completion:nil];

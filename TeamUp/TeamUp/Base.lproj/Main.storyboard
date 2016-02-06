@@ -661,6 +661,9 @@ send you a temporary password.</string>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="164" y="354" width="46" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="createGroup:" destination="R9Z-w6-5Kk" eventType="touchUpInside" id="yK8-Sk-7b7"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Private" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVc-rX-vZC">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
