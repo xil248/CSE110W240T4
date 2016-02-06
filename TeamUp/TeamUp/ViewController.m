@@ -13,7 +13,7 @@
 @end
 
 @implementation ViewController
-@synthesize emailText, passwordText, enterEmailText, enterPasswordText, confirmPasswordText, groupNameText, maxPeopleText, resetPasswordText, memberMajorText,memberNameText,memberYearText, searchText, tableView, addCourseText, addProfText, addTermText, addSectionText, changeOldPasswordText, changeNewPasswordText, changeComfirmPasswordText;
+@synthesize emailText, passwordText, enterEmailText, enterPasswordText, confirmPasswordText, groupNameText, maxPeopleText, resetPasswordText, memberMajorText,memberNameText,memberYearText, searchText, tableView, addCourseText, addProfText, addTermText, addSectionText, changeOldPasswordText, changeNewPasswordText, changeComfirmPasswordText, addGroupNameText, addMaxPeopleText;
 
 Firebase *firebase;
 Firebase *users_ref;
@@ -271,6 +271,7 @@ NSMutableDictionary *result;
 }
 
 - (IBAction)newClass:(id)sender{
+    if([addCourseText.text isEqualToString:@""]||[addProfText.text isEqualToString:@""]||[addTermText.text isEqualToString:@""]||[addSectionText.text isEqualToString:@""])
     NSDictionary *new_class_info = @{@"name":addCourseText.text,
                                 @"prof" :addProfText.text,
                                 @"term" :addTermText.text,
@@ -283,6 +284,25 @@ NSMutableDictionary *result;
     [class_ref updateChildValues:new_class];
     viewcontroller = [mainstoryboard instantiateViewControllerWithIdentifier:@"searchClassViewController"];
     [self presentViewController:viewcontroller animated:YES completion:nil];
+}
+
+- (IBAction)createGroup:(id)sender{
+    if([addGroupNameText.text isEqualToString:@""] || [addMaxPeopleText.text isEqualToString:@""])
+        return;
+    NSString *groupuid = [firebase.authData.uid stringByAppendingString:addGroupNameText.text];
+    NSString *groupName = addGroupNameText.text;
+    NSString *groupNum = addMaxPeopleText.text;
+    BOOL *isPrivate = isPrivate.boolValue;
+    NSArray *teamMember = @{firebase.authData.uid};
+    NSDictionary *new_group_info = @{@"name" : groupName,
+                                     @"teammember" : teamMember,
+                                     @"leader" : firebase.authData.uid,
+                                     @"groupinfo" : @"New group!",
+                                     @"maxnumber" : groupNum,
+                                     @"isprivate" : isPrivate,
+                                     @"password" : @"password"};
+    NSDictionary *new_group = @{groupuid : new_group_info};
+    [class updateChildValues:new_group];
 }
 
 #pragma mark - Table view data source
@@ -323,7 +343,8 @@ NSMutableDictionary *result;
 -(void) tableView:(UITableView *)table didSelectRowAtIndexPath:(NSIndexPath*)indexPath{
     UITableViewCell *cell = [table cellForRowAtIndexPath:indexPath];
     if(cell!=nil){
-        NSLog(@"cell is not null!");
+        NSString *classuid = 
+        class = [class_ref childByAppendingPath:<#(NSString *)#>];
         viewcontroller = [mainstoryboard instantiateViewControllerWithIdentifier:@"allGroupsForClassViewController"];
         [self presentViewController:viewcontroller animated:YES completion:nil];
     }

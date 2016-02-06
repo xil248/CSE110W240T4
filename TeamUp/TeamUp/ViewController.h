@@ -28,6 +28,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *changeOldPasswordText;
 @property (weak, nonatomic) IBOutlet UITextField *changeNewPasswordText;
 @property (weak, nonatomic) IBOutlet UITextField *changeComfirmPasswordText;
+@property (weak, nonatomic) IBOutlet UITextField *addGroupNameText;
+@property (weak, nonatomic) IBOutlet UITextField *addMaxPeopleText;
+@property (weak, nonatomic) IBOutlet UISwitch *isPrivateSwitch;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 //- (IBAction)showGroupInfo:(id)sender;
@@ -40,5 +43,6 @@
 - (IBAction)newClass:(id)sender;
 - (IBAction)keyboardExit:(id)sender;
 - (IBAction)updateNewPassword:(id)sender;
+- (IBAction)createGroup:(id)sender;
 @end
 
