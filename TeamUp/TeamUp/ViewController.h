@@ -25,6 +25,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *addCourseText;
 @property (weak, nonatomic) IBOutlet UITextField *addTermText;
 @property (weak, nonatomic) IBOutlet UITextField *addSectionText;
+@property (weak, nonatomic) IBOutlet UITextField *changeOldPasswordText;
+@property (weak, nonatomic) IBOutlet UITextField *changeNewPasswordText;
+@property (weak, nonatomic) IBOutlet UITextField *changeComfirmPasswordText;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 //- (IBAction)showGroupInfo:(id)sender;
@@ -36,5 +39,6 @@
 - (IBAction)searchClasses:(id)sender;
 - (IBAction)newClass:(id)sender;
 - (IBAction)keyboardExit:(id)sender;
+- (IBAction)updateNewPassword:(id)sender;
 @end
 

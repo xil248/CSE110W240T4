@@ -13,7 +13,7 @@
 @end
 
 @implementation ViewController
-@synthesize emailText, passwordText, enterEmailText, enterPasswordText, confirmPasswordText, groupNameText, maxPeopleText, resetPasswordText, memberMajorText,memberNameText,memberYearText, searchText, tableView, addCourseText, addProfText, addTermText, addSectionText;
+@synthesize emailText, passwordText, enterEmailText, enterPasswordText, confirmPasswordText, groupNameText, maxPeopleText, resetPasswordText, memberMajorText,memberNameText,memberYearText, searchText, tableView, addCourseText, addProfText, addTermText, addSectionText, changeOldPasswordText, changeNewPasswordText, changeComfirmPasswordText;
 
 Firebase *firebase;
 Firebase *users_ref;
@@ -221,6 +221,30 @@ NSMutableDictionary *result;
                                 };
     NSDictionary *new_user = @{uid : user_info};
     [users_ref updateChildValues:new_user];
+}
+
+- (IBAction)updateNewPassword:(id)sender {
+    if(![changeNewPasswordText.text isEqualToString:changeComfirmPasswordText.text]){
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"Different passwords." preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:defaultAction];
+        [self presentViewController:alert animated:YES completion:nil];
+        return;
+    }
+    
+    [firebase changePasswordForUser:email fromOld:changeOldPasswordText.text
+    toNew:changeNewPasswordText.text withCompletionBlock:^(NSError *error) {
+        if (error) {
+            NSString *errorMessage = [error localizedDescription];
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error" message:errorMessage preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:defaultAction];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+        else {
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"Successfully change your password." preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:defaultAction];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+    }];
 }
 
 - (IBAction)searchClasses:(id)sender{
