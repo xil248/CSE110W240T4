@@ -36,9 +36,11 @@ class MessagesViewController: JSQMessagesViewController {
       let sender = snapshot.value["sender"] as? String
       let imageUrl = snapshot.value["imageUrl"] as? String
       
-      let message = Message(text: text, sender: sender, imageUrl: imageUrl)
-      self.messages.append(message)
-      self.finishReceivingMessage()
+      if(sender != nil) {
+        let message = Message(text: text, sender: sender, imageUrl: imageUrl)
+        self.messages.append(message)
+        self.finishReceivingMessage()
+      }
     })
   }
   
@@ -110,7 +112,7 @@ class MessagesViewController: JSQMessagesViewController {
   
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
-    collectionView!.collectionViewLayout.springinessEnabled = true
+    collectionView!.collectionViewLayout.springinessEnabled = false
   }
   
   override func viewWillDisappear(animated: Bool) {

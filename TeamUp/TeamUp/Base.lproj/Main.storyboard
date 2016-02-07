@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
         <!--forgetPassword-->
@@ -22,6 +22,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPO-Fw-Z5x">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
@@ -35,6 +36,7 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1f-QL-ahA">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="23"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -44,6 +46,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Fo-Ic-SGi">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <state key="normal" title="Send">
                                             <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
@@ -57,6 +60,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" red="0.53333333329999999" green="0.75686274509999996" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="default">
                                     <mask key="subviews">
@@ -76,6 +80,7 @@
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Type your UCSD Email here..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vqv-Nk-NcR">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -84,6 +89,7 @@
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5f-Ey-4A4">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
                                 <string key="text">Forgot your password?
 bibibi</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -95,6 +101,7 @@ bibibi</string>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VrJ-vB-qp4">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
                                 <string key="text">Enter your UCSD E-mail, we will
 send you a temporary password.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -105,6 +112,7 @@ send you a temporary password.</string>
                                 </variation>
                             </label>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" red="0.85882352939999995" green="0.92941176469999998" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
@@ -146,6 +154,7 @@ send you a temporary password.</string>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Your UCSD Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JS8-Hd-avl">
                                 <rect key="frame" x="85" y="192" width="207" height="40"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <userDefinedRuntimeAttributes>
@@ -160,6 +169,7 @@ send you a temporary password.</string>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="TeamUp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUC-Hz-FSz">
                                 <rect key="frame" x="66" y="58" width="243" height="99"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -169,6 +179,7 @@ send you a temporary password.</string>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zdl-Lf-rIE">
                                 <rect key="frame" x="84" y="253" width="208" height="40"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
@@ -180,6 +191,7 @@ send you a temporary password.</string>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXe-Nf-3Sv">
                                 <rect key="frame" x="174" y="313" width="118" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Forgot Password :(">
                                     <color key="titleColor" red="0.050980392159999999" green="0.2470588235" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -193,6 +205,7 @@ send you a temporary password.</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Elm-qX-c53">
                                 <rect key="frame" x="144" y="434" width="87" height="36"/>
+                                <animations/>
                                 <color key="backgroundColor" red="0.074509803921568626" green="0.396078431372549" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Sign Up">
@@ -210,6 +223,7 @@ send you a temporary password.</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOe-V5-5au">
                                 <rect key="frame" x="121" y="377" width="132" height="30"/>
+                                <animations/>
                                 <color key="backgroundColor" red="0.78823529410000004" green="0.94901960780000005" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Sign In">
@@ -228,6 +242,7 @@ send you a temporary password.</string>
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" red="0.53333333333333333" green="0.75686274509803919" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="vUC-Hz-FSz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Gx-Ry-HRm"/>
@@ -262,6 +277,7 @@ send you a temporary password.</string>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ygz-Kn-Ji0">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
                                 <color key="backgroundColor" red="0.53333333333333333" green="0.75686274509803919" blue="0.78431372549019607" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -274,6 +290,7 @@ send you a temporary password.</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezj-ZY-F9x">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
                                 <color key="backgroundColor" red="0.63921568627450975" green="0.80392156862745101" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -289,6 +306,7 @@ send you a temporary password.</string>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpM-aS-MfX">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" red="0.24705882352941178" green="0.396078431372549" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -298,6 +316,7 @@ send you a temporary password.</string>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73y-5c-YZ5">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
                                 <color key="backgroundColor" red="0.63921568627450975" green="0.80392156862745101" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" red="0.2470588235" green="0.39607843139999999" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -308,6 +327,7 @@ send you a temporary password.</string>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CSE 110: WeRockYo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpu-KA-oLs">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.24705882352941178" green="0.396078431372549" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -317,6 +337,7 @@ send you a temporary password.</string>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CSE 101: Group3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3h-GI-Wgz">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.24705882352941178" green="0.396078431372549" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -329,6 +350,7 @@ send you a temporary password.</string>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4li-Ce-Yp3">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <animations/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="344" y="31" width="22" height="22"/>
                                         </variation>
@@ -341,6 +363,7 @@ send you a temporary password.</string>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Groups" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XW3-XK-B2J">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -353,6 +376,7 @@ send you a temporary password.</string>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lkb-u8-JJt">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <state key="normal" title="Sign Out">
                                             <color key="titleColor" red="0.0" green="0.027450980392156862" blue="0.031372549019607843" alpha="0.5" colorSpace="calibratedRGB"/>
@@ -369,6 +393,7 @@ send you a temporary password.</string>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" red="0.53333333333333333" green="0.75686274509803919" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="default">
                                     <mask key="subviews">
@@ -391,6 +416,7 @@ send you a temporary password.</string>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bc-D9-s0a">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
                                 <state key="normal" title="MyAccount"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="272" y="617" width="77" height="30"/>
@@ -400,6 +426,7 @@ send you a temporary password.</string>
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" red="0.85882352941176465" green="0.92941176470588238" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
@@ -453,6 +480,7 @@ send you a temporary password.</string>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2O-gh-lac">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
@@ -469,6 +497,7 @@ send you a temporary password.</string>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gob-qy-gd2">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <animations/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="344" y="31" width="22" height="22"/>
                                         </variation>
@@ -481,6 +510,7 @@ send you a temporary password.</string>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" //CSE110 WI16" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZM-zm-RbD">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="19"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -492,6 +522,7 @@ send you a temporary password.</string>
                                         </variation>
                                     </label>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" red="0.53333333329999999" green="0.75686274509999996" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="default">
                                     <mask key="subviews">
@@ -512,6 +543,7 @@ send you a temporary password.</string>
                                 </variation>
                             </view>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" red="0.83137254901960789" green="0.9137254901960784" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
@@ -533,7 +565,7 @@ send you a temporary password.</string>
         <!--groupChat-->
         <scene sceneID="Afe-up-4ge">
             <objects>
-                <viewController title="groupChat" id="WSX-Fx-Mn1" sceneMemberID="viewController">
+                <viewController title="groupChat" id="WSX-Fx-Mn1" customClass="MessagesViewController" customModule="TeamUp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="InF-Vb-6nJ"/>
                         <viewControllerLayoutGuide type="bottom" id="hXE-UD-JW8"/>
@@ -547,6 +579,7 @@ send you a temporary password.</string>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VaJ-47-IHu">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                         <state key="normal" title="Groups">
                                             <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
@@ -563,6 +596,7 @@ send you a temporary password.</string>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="//GroupName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y47-s9-EwP">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="23"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -572,6 +606,7 @@ send you a temporary password.</string>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bug-av-5ay">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
                                         <state key="normal" title="Details">
                                             <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
@@ -581,6 +616,7 @@ send you a temporary password.</string>
                                         </variation>
                                     </button>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" red="0.53333333329999999" green="0.75686274509999996" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="default">
                                     <mask key="subviews">
@@ -603,6 +639,7 @@ send you a temporary password.</string>
                                 </variation>
                             </view>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" red="0.83137254901960789" green="0.9137254901960784" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
@@ -635,6 +672,7 @@ send you a temporary password.</string>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Group name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8aw-h2-V1Y">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -643,6 +681,7 @@ send you a temporary password.</string>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Max people" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ELn-O5-lc2">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -651,12 +690,14 @@ send you a temporary password.</string>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Bu-vu-fhB">
                                 <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <animations/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="213" y="274" width="51" height="31"/>
                                 </variation>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dx-MG-8wZ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Create"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="164" y="354" width="46" height="30"/>
@@ -667,8 +708,9 @@ send you a temporary password.</string>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Private" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVc-rX-vZC">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="128" y="279" width="53" height="21"/>
@@ -676,6 +718,7 @@ send you a temporary password.</string>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tli-e7-CwN">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Back"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="40" y="35" width="34" height="30"/>
@@ -685,6 +728,7 @@ send you a temporary password.</string>
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" red="0.85882352939999995" green="0.92941176469999998" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
@@ -732,6 +776,7 @@ send you a temporary password.</string>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TeamUp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noV-zZ-icW">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -741,6 +786,7 @@ send you a temporary password.</string>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Your UCSD Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gfm-u6-qMu">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -752,6 +798,7 @@ send you a temporary password.</string>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eRt-wc-nZ7">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -763,6 +810,7 @@ send you a temporary password.</string>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vru-PW-Fsm">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -774,6 +822,7 @@ send you a temporary password.</string>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LA9-QN-N9V">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
                                 <color key="backgroundColor" red="0.78823529411764703" green="0.94901960784313721" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Sign Up!">
@@ -793,6 +842,7 @@ send you a temporary password.</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDb-qI-Zvk">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title=" Back">
                                     <color key="titleColor" red="0.24705882352941178" green="0.396078431372549" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
@@ -805,6 +855,7 @@ send you a temporary password.</string>
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" red="0.53333333333333333" green="0.75686274509803919" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
@@ -852,6 +903,7 @@ send you a temporary password.</string>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l5W-PF-4n3">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="143" width="375" height="524"/>
@@ -863,6 +915,7 @@ send you a temporary password.</string>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xX8-FL-yo5">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
@@ -876,6 +929,7 @@ send you a temporary password.</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufm-na-QHK">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Course not found">
                                     <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
@@ -889,6 +943,7 @@ send you a temporary password.</string>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Search here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hDn-mv-zd1">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -900,6 +955,7 @@ send you a temporary password.</string>
                                 </connections>
                             </textField>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" red="0.85882352941176465" green="0.92941176470588238" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
@@ -975,8 +1031,9 @@ send you a temporary password.</string>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkT-Dx-0HJ">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="60" y="183" width="109" height="21"/>
@@ -984,8 +1041,9 @@ send you a temporary password.</string>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Professor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBQ-e2-SFO">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="91" y="251" width="78" height="21"/>
@@ -993,8 +1051,9 @@ send you a temporary password.</string>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Term:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zh-TC-bHO">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="125" y="364" width="44" height="21"/>
@@ -1002,6 +1061,7 @@ send you a temporary password.</string>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Put name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s2d-n4-6ec">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -1013,6 +1073,7 @@ send you a temporary password.</string>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Put prof's name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E3b-z5-wwv">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -1024,6 +1085,7 @@ send you a temporary password.</string>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Put term here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ABs-rU-fk0">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -1035,6 +1097,7 @@ send you a temporary password.</string>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSf-JM-sB0">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
@@ -1048,8 +1111,9 @@ send you a temporary password.</string>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uD4-Pl-x1V">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="104" y="310" width="63" height="21"/>
@@ -1057,6 +1121,7 @@ send you a temporary password.</string>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Put your section here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Km-pI-6PR">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -1068,6 +1133,7 @@ send you a temporary password.</string>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Zp-1b-D0j">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Update">
                                     <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
@@ -1080,6 +1146,7 @@ send you a temporary password.</string>
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" red="0.85882352939999995" green="0.92941176469999998" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
@@ -1139,6 +1206,7 @@ send you a temporary password.</string>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pu5-Yn-v2t">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                         <state key="normal" title="Chat">
                                             <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
@@ -1152,6 +1220,7 @@ send you a temporary password.</string>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gad-Lu-gFM">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="23"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1160,6 +1229,7 @@ send you a temporary password.</string>
                                         </variation>
                                     </label>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" red="0.53333333329999999" green="0.75686274509999996" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="default">
                                     <mask key="subviews">
@@ -1179,6 +1249,7 @@ send you a temporary password.</string>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELo-zg-TyW">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
                                 <color key="backgroundColor" red="1" green="0.1122704859737057" blue="0.21968304723541188" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Quit">
@@ -1190,24 +1261,28 @@ send you a temporary password.</string>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1169645.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cCy-rt-XXQ">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="33" y="110" width="80" height="80"/>
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1169645.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="GoR-pU-qnx">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="147" y="110" width="80" height="80"/>
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1169645.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1TB-fC-E9X">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="266" y="110" width="80" height="80"/>
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xinghang Li" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCr-r5-flV">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1217,6 +1292,7 @@ send you a temporary password.</string>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xinghang Li" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbY-gj-Cc9">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1226,6 +1302,7 @@ send you a temporary password.</string>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xinghang Li" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qG-e8-hdJ">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1234,6 +1311,7 @@ send you a temporary password.</string>
                                 </variation>
                             </label>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" red="0.85882352939999995" green="0.92941176469999998" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
@@ -1283,6 +1361,7 @@ send you a temporary password.</string>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ChG-ci-uut">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <state key="normal" title="Done">
                                             <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
@@ -1296,6 +1375,7 @@ send you a temporary password.</string>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaK-y9-wov">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <state key="normal" title="update">
                                             <color key="titleColor" red="0.0" green="0.027450980390000001" blue="0.031372549020000001" alpha="0.5" colorSpace="calibratedRGB"/>
@@ -1309,6 +1389,7 @@ send you a temporary password.</string>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" red="0.53333333329999999" green="0.75686274509999996" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="default">
                                     <mask key="subviews">
@@ -1326,8 +1407,9 @@ send you a temporary password.</string>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCl-cn-3We">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="75" y="342" width="39" height="21"/>
@@ -1335,8 +1417,9 @@ send you a temporary password.</string>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Major:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Gb-1g-B0f">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="66" y="280" width="48" height="21"/>
@@ -1344,8 +1427,9 @@ send you a temporary password.</string>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLm-bA-8Vc">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="66" y="215" width="50" height="21"/>
@@ -1353,8 +1437,9 @@ send you a temporary password.</string>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Still in construction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLC-92-OaS">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="114" y="127" width="147" height="21"/>
@@ -1362,6 +1447,7 @@ send you a temporary password.</string>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Put your major here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ne1-un-cYg">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -1373,6 +1459,7 @@ send you a temporary password.</string>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Put your year here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZUz-Nf-TdA">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -1384,6 +1471,7 @@ send you a temporary password.</string>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFN-Yu-HeG">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Change password"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="126" y="408" width="123" height="30"/>
@@ -1394,6 +1482,7 @@ send you a temporary password.</string>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Put your name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aWO-5A-eYr">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -1404,6 +1493,7 @@ send you a temporary password.</string>
                                 </connections>
                             </textField>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" red="0.85882352939999995" green="0.92941176469999998" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
@@ -1452,10 +1542,12 @@ send you a temporary password.</string>
                         <viewControllerLayoutGuide type="bottom" id="EOr-cO-7ia"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Lkz-FY-T8n">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J5s-9Q-JOg">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -1464,6 +1556,7 @@ send you a temporary password.</string>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Comfirm your new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XE1-A7-9aw">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -1472,6 +1565,7 @@ send you a temporary password.</string>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvJ-H3-UKj">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Update"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="175" y="360" width="51" height="30"/>
@@ -1482,6 +1576,7 @@ send you a temporary password.</string>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your old password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TQe-UL-vrG" userLabel="Change Old Password Text">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -1490,6 +1585,7 @@ send you a temporary password.</string>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xv-ak-WTs">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Done"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="172" y="433" width="57" height="30"/>
@@ -1499,6 +1595,7 @@ send you a temporary password.</string>
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" red="0.85882352939999995" green="0.92941176469999998" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
@@ -1534,10 +1631,10 @@ send you a temporary password.</string>
         <image name="1169645.jpg" width="634" height="368"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Wb6-fH-OsW"/>
-        <segue reference="u1L-c5-W4l"/>
         <segue reference="gMt-aE-nju"/>
+        <segue reference="okZ-j2-4QY"/>
         <segue reference="eDG-sU-cWG"/>
+        <segue reference="u1L-c5-W4l"/>
         <segue reference="ysN-Fc-aia"/>
     </inferredMetricsTieBreakers>
 </document>

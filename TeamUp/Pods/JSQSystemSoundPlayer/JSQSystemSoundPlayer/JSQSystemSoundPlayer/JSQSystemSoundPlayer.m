@@ -194,7 +194,7 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 
 - (void)playSoundWithFilename:(NSString *)filename
                 fileExtension:(NSString *)fileExtension
-                   completion:(JSQSystemSoundPlayerCompletionBlock)completionBlock
+                   completion:(JSQSystemSoundPlayerCompletionBlock)completionBlock;
 {
     [self playSoundWithName:filename
                   extension:fileExtension
@@ -204,7 +204,7 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 
 - (void)playAlertSoundWithFilename:(NSString *)filename
                      fileExtension:(NSString *)fileExtension
-                        completion:(JSQSystemSoundPlayerCompletionBlock)completionBlock
+                        completion:(JSQSystemSoundPlayerCompletionBlock)completionBlock;
 {
     [self playSoundWithName:filename
                   extension:fileExtension

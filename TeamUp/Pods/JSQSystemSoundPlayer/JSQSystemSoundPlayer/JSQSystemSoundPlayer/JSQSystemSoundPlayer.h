@@ -134,8 +134,8 @@ typedef void(^JSQSystemSoundPlayerCompletionBlock)(void);
  @warning If the system sound object cannot be created, this method does nothing.
  */
 - (void)playSoundWithFilename:(NSString *)filename
-                fileExtension:(NSString *)fileExtension;
-                   //completion:(nullable JSQSystemSoundPlayerCompletionBlock)completionBlock;
+                fileExtension:(NSString *)fileExtension
+                   completion:(nullable JSQSystemSoundPlayerCompletionBlock)completionBlock;
 
 /**
  Plays a system sound object *as an alert* corresponding to an audio file with the given filename and extension,
@@ -157,8 +157,8 @@ typedef void(^JSQSystemSoundPlayerCompletionBlock)(void);
  with the excepion that, depending on the particular iOS device, this method may invoke vibration.
  */
 - (void)playAlertSoundWithFilename:(NSString *)filename
-                     fileExtension:(NSString *)fileExtension;
-                        //completion:(nullable JSQSystemSoundPlayerCompletionBlock)completionBlock;
+                     fileExtension:(NSString *)fileExtension
+                        completion:(nullable JSQSystemSoundPlayerCompletionBlock)completionBlock;
 
 /**
  On some iOS devices, you can call this method to invoke vibration.
