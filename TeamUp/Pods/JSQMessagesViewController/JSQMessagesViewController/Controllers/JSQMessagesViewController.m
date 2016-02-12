@@ -39,6 +39,7 @@
 
 #import "NSString+JSQMessages.h"
 #import "UIColor+JSQMessages.h"
+#import <Firebase/Firebase.h>
 
 
 static void * kJSQMessagesKeyValueObservingContext = &kJSQMessagesKeyValueObservingContext;
@@ -61,6 +62,7 @@ static void * kJSQMessagesKeyValueObservingContext = &kJSQMessagesKeyValueObserv
 @property (assign, nonatomic) BOOL jsq_isObserving;
 
 @property (strong, nonatomic) NSIndexPath *selectedIndexPathForMenu;
+
 
 - (void)jsq_configureMessagesViewController;
 
@@ -96,6 +98,10 @@ static void * kJSQMessagesKeyValueObservingContext = &kJSQMessagesKeyValueObserv
 
 @implementation JSQMessagesViewController
 
+
+Firebase *firebase;
+
+
 #pragma mark - Class methods
 
 + (UINib *)nib
@@ -126,9 +132,15 @@ static void * kJSQMessagesKeyValueObservingContext = &kJSQMessagesKeyValueObserv
     self.inputToolbar.delegate = self;
     self.inputToolbar.contentView.textView.placeHolder = NSLocalizedString(@"New Message", @"Placeholder text for the message input text view");
     self.inputToolbar.contentView.textView.delegate = self;
-    
-    self.sender = @"JSQDefaultSender";
-    
+  
+    firebase = [[Firebase alloc] initWithUrl:@"https://resplendent-inferno-8485.firebaseio.com/users"];
+    firebase = [firebase childByAppendingPath:firebase.authData.uid];
+    [firebase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+      self.sender = snapshot.value[@"name"];
+    } withCancelBlock:^(NSError *error) {
+      NSLog(@"%@", error.description);
+    }];
+  
     self.automaticallyScrollsToMostRecentMessage = YES;
     
     self.outgoingCellIdentifier = [JSQMessagesCollectionViewCellOutgoing cellReuseIdentifier];
