@@ -18,11 +18,17 @@ Firebase *firebase1;
 Firebase *users_ref1;
 Firebase *users1;
 
+
+//NSString *account;
+//NSString *password;
+
+
 NSString *email1;
 NSString *uid1;
 NSString *name1;
 NSString *year1;
 NSString *major1;
+
 UIStoryboard *mainstoryboard1;
 UIViewController *viewcontroller1;
 UIAlertAction* defaultAction1;
@@ -66,6 +72,19 @@ UIAlertAction* defaultAction1;
     firebase1 = [[Firebase alloc] initWithUrl:@"https://resplendent-inferno-8485.firebaseio.com"];
     defaultAction1 = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}]; //initialize the default alertview action
     mainstoryboard1 = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString *account = [defaults objectForKey:@"account"];
+    NSString *password = [defaults objectForKey:@"password"];
+    NSString *signOut = [defaults objectForKey:@"signOut"];
+    
+    emailText.text = account;
+    passwordText.text = password;
+    
+    if ([signOut isEqualToString:@"False"]){
+      [self sign];
+    }
 
 }
 
@@ -89,9 +108,10 @@ UIAlertAction* defaultAction1;
 }
 
 - (IBAction)signIn:(UIButton *)sender {
-    //test approach
-    emailText.text = @"test@ucsd.edu";
-    passwordText.text = @"test";
+    [self sign];
+}
+
+- (void) sign {
     [firebase1 authUser:emailText.text password:passwordText.text withCompletionBlock:^(NSError *error, FAuthData *authData) {
         if (error) {
             NSString *errorMessage = [error localizedDescription];
@@ -102,6 +122,18 @@ UIAlertAction* defaultAction1;
             email1 = emailText.text;
             uid1 = authData.uid;
             [self loadData];
+            
+            NSString *account = [emailText text];
+            NSString *password  = [passwordText text];
+            NSString *signOut  = @"False";
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            
+            [defaults setObject:account forKey:@"account"];
+            [defaults setObject:password forKey:@"password"];
+            [defaults setObject:signOut forKey:@"signOut"];
+        
+            [defaults synchronize];
+            
             users1 = [users_ref1 childByAppendingPath:uid1];
             [users1 observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
                 name1 = snapshot.value[@"name"];
@@ -115,5 +147,6 @@ UIAlertAction* defaultAction1;
             NSLog(@"user should have signed in");
         }
     }];
+    
 }
 @end

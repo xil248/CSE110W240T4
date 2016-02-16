@@ -141,6 +141,14 @@ NSMutableDictionary *result;
 
 - (IBAction)signOut:(id)sender{
     [firebase unauth];
+    
+    NSString *signOut  = @"True";
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    [defaults setObject:signOut forKey:@"signOut"];
+    
+    [defaults synchronize];
+    
     NSLog(@"user should be signed out");
     email = @"";
     uid = @"";
