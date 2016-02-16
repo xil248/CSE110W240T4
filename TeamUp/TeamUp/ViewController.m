@@ -13,7 +13,7 @@
 @end
 
 @implementation ViewController
-@synthesize emailText, passwordText, enterEmailText, enterPasswordText, confirmPasswordText, groupNameText, maxPeopleText, resetPasswordText, memberMajorText,memberNameText,memberYearText, searchText, tableView, addCourseText, addProfText, addTermText, addSectionText, changeOldPasswordText, changeNewPasswordText, changeComfirmPasswordText, addGroupNameText, addMaxPeopleText, isPrivateSwitch;
+@synthesize enterEmailText, enterPasswordText, confirmPasswordText, groupNameText, maxPeopleText, resetPasswordText, memberMajorText,memberNameText,memberYearText, searchText, tableView, addCourseText, addProfText, addTermText, addSectionText, changeOldPasswordText, changeNewPasswordText, changeComfirmPasswordText, addGroupNameText, addMaxPeopleText, isPrivateSwitch;
 
 Firebase *firebase;
 Firebase *users_ref;
@@ -40,9 +40,6 @@ NSMutableDictionary *result;
   [super viewDidLoad];
     [self.tableView reloadData];
     // Do any additional setup after loading the view, typically from a nib.
-    self.emailText.borderStyle = UITextBorderStyleRoundedRect;
-    self.passwordText.borderStyle = UITextBorderStyleRoundedRect;
-    [self.passwordText setSecureTextEntry:YES];
     self.enterEmailText.borderStyle = UITextBorderStyleRoundedRect;
     self.enterPasswordText.borderStyle = UITextBorderStyleRoundedRect;
     [self.enterPasswordText setSecureTextEntry:YES];
@@ -95,34 +92,6 @@ NSMutableDictionary *result;
 //    [closeInfo removeFromSuperview];
 //}
 
-- (IBAction)signIn:(id)sender{
-    //test approach
-    emailText.text = @"test@ucsd.edu";
-    passwordText.text = @"test";
-    [firebase authUser:emailText.text password:passwordText.text withCompletionBlock:^(NSError *error, FAuthData *authData) {
-    if (error) {
-        NSString *errorMessage = [error localizedDescription];
-        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error" message:errorMessage preferredStyle:UIAlertControllerStyleAlert];
-        [alert addAction:defaultAction];
-        [self presentViewController:alert animated:YES completion:nil];
-    } else {
-        email = emailText.text;
-        uid = authData.uid;
-        [self loadData];
-        users = [users_ref childByAppendingPath:uid];
-        [users observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
-            name = snapshot.value[@"name"];
-            year = snapshot.value[@"year"];
-            major = snapshot.value[@"major"];
-        } withCancelBlock:^(NSError *error) {
-            NSLog(@"%@", error.description);
-        }];
-        viewcontroller = [mainstoryboard instantiateViewControllerWithIdentifier:@"myGroupsViewController"];
-        [self presentViewController:viewcontroller animated:YES completion:nil];
-        NSLog(@"user should have signed in");
-    }
-    }];
-}
 
 - (IBAction)signUp:(id)sender{
     NSString * domain = [enterEmailText.text substringFromIndex:MAX((int)[enterEmailText.text length]-8, 0)];    

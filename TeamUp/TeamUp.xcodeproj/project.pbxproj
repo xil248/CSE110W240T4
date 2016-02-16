@@ -15,7 +15,6 @@
 		5410FFBD1C65D715001DA96D /* libicucore.A.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5410FFBC1C65D715001DA96D /* libicucore.A.dylib */; };
 		5496120E1C5C024100F8E67B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5496120D1C5C024100F8E67B /* CFNetwork.framework */; };
 		549612101C5C024800F8E67B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5496120F1C5C024800F8E67B /* Security.framework */; };
-		54EA6C391C58A5E600BF3DC6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA6C381C58A5E600BF3DC6 /* main.m */; };
 		54EA6C3C1C58A5E600BF3DC6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA6C3B1C58A5E600BF3DC6 /* AppDelegate.m */; };
 		54EA6C3F1C58A5E600BF3DC6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA6C3E1C58A5E600BF3DC6 /* ViewController.m */; };
 		54EA6C421C58A5E600BF3DC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54EA6C401C58A5E600BF3DC6 /* Main.storyboard */; };
@@ -25,6 +24,12 @@
 		54EA6C551C58A5E600BF3DC6 /* TeamUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA6C541C58A5E600BF3DC6 /* TeamUpTests.m */; };
 		54EA6C601C58A5E600BF3DC6 /* TeamUpUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EA6C5F1C58A5E600BF3DC6 /* TeamUpUITests.m */; };
 		5A9F60001C5D8735005225B7 /* 1169645.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5A9F5FFF1C5D8735005225B7 /* 1169645.jpg */; };
+		5AC47BA41C726BF4006DD3B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC47BA31C726BF4006DD3B5 /* main.m */; };
+		5AC47BA51C726BF4006DD3B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC47BA31C726BF4006DD3B5 /* main.m */; };
+		5AC47BA61C726BF4006DD3B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC47BA31C726BF4006DD3B5 /* main.m */; };
+		5AC47BA91C726C23006DD3B5 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC47BA81C726C23006DD3B5 /* SignInViewController.m */; };
+		5AC47BAA1C726C23006DD3B5 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC47BA81C726C23006DD3B5 /* SignInViewController.m */; };
+		5AC47BAB1C726C23006DD3B5 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC47BA81C726C23006DD3B5 /* SignInViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +64,6 @@
 		549612161C5C065200F8E67B /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		549612181C5C065A00F8E67B /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		54EA6C341C58A5E600BF3DC6 /* TeamUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		54EA6C381C58A5E600BF3DC6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		54EA6C3A1C58A5E600BF3DC6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		54EA6C3B1C58A5E600BF3DC6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		54EA6C3D1C58A5E600BF3DC6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -76,6 +80,9 @@
 		54EA6C5F1C58A5E600BF3DC6 /* TeamUpUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeamUpUITests.m; sourceTree = "<group>"; };
 		54EA6C611C58A5E600BF3DC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A9F5FFF1C5D8735005225B7 /* 1169645.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1169645.jpg; sourceTree = "<group>"; };
+		5AC47BA31C726BF4006DD3B5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5AC47BA71C726C23006DD3B5 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		5AC47BA81C726C23006DD3B5 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		94D56AEECF75E39C576FAED8 /* libPods-TeamUp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TeamUp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB480674000418BEE6F1B1D6 /* Pods-TeamUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TeamUp/Pods-TeamUp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +166,8 @@
 				54EA6C4B1C58A5E600BF3DC6 /* Info.plist */,
 				54EA6C431C58A5E600BF3DC6 /* TeamUp.xcdatamodeld */,
 				54EA6C371C58A5E600BF3DC6 /* Supporting Files */,
+				5AC47BA71C726C23006DD3B5 /* SignInViewController.h */,
+				5AC47BA81C726C23006DD3B5 /* SignInViewController.m */,
 			);
 			path = TeamUp;
 			sourceTree = "<group>";
@@ -166,7 +175,7 @@
 		54EA6C371C58A5E600BF3DC6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				54EA6C381C58A5E600BF3DC6 /* main.m */,
+				5AC47BA31C726BF4006DD3B5 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -271,6 +280,7 @@
 		54EA6C2C1C58A5E500BF3DC6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = CSE110W240T4;
 				TargetAttributes = {
@@ -391,11 +401,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AC47BA91C726C23006DD3B5 /* SignInViewController.m in Sources */,
 				54EA6C3F1C58A5E600BF3DC6 /* ViewController.m in Sources */,
 				54EA6C3C1C58A5E600BF3DC6 /* AppDelegate.m in Sources */,
-				54EA6C391C58A5E600BF3DC6 /* main.m in Sources */,
 				54EA6C451C58A5E600BF3DC6 /* TeamUp.xcdatamodeld in Sources */,
 				5410FFB51C65CBC2001DA96D /* Message.swift in Sources */,
+				5AC47BA41C726BF4006DD3B5 /* main.m in Sources */,
 				5410FDB31C65B7AB001DA96D /* MessagesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +415,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AC47BA51C726BF4006DD3B5 /* main.m in Sources */,
+				5AC47BAA1C726C23006DD3B5 /* SignInViewController.m in Sources */,
 				54EA6C551C58A5E600BF3DC6 /* TeamUpTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +425,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AC47BA61C726BF4006DD3B5 /* main.m in Sources */,
+				5AC47BAB1C726C23006DD3B5 /* SignInViewController.m in Sources */,
 				54EA6C601C58A5E600BF3DC6 /* TeamUpUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -622,10 +637,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TeamUpTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.renoyin.TeamUpTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TeamUp/TeamUpTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TeamUp.app/TeamUp";
 			};
 			name = Debug;
@@ -634,10 +652,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TeamUpTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.renoyin.TeamUpTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TeamUp/TeamUpTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TeamUp.app/TeamUp";
 			};
 			name = Release;
@@ -645,10 +665,13 @@
 		54EA6C6B1C58A5E600BF3DC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TeamUpUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.renoyin.TeamUpUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TeamUp/TeamUpUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_TARGET_NAME = TeamUp;
 				USES_XCTRUNNER = YES;
 			};
@@ -657,10 +680,12 @@
 		54EA6C6C1C58A5E600BF3DC6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TeamUpUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.renoyin.TeamUpUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TeamUp/TeamUpUITests-Bridging-Header.h";
 				TEST_TARGET_NAME = TeamUp;
 				USES_XCTRUNNER = YES;
 			};

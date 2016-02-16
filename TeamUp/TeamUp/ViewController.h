@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 @interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
-@property (weak, nonatomic) IBOutlet UITextField *emailText;
-@property (weak, nonatomic) IBOutlet UITextField *passwordText;
 @property (weak, nonatomic) IBOutlet UITextField *enterEmailText;
 @property (weak, nonatomic) IBOutlet UITextField *enterPasswordText;
 @property (weak, nonatomic) IBOutlet UITextField *confirmPasswordText;
@@ -34,7 +32,6 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 //- (IBAction)showGroupInfo:(id)sender;
-- (IBAction)signIn:(id)sender;
 - (IBAction)signUp:(id)sender;
 - (IBAction)resetPassword:(id)sender;
 - (IBAction)signOut:(id)sender;
