@@ -85,7 +85,7 @@ send you a temporary password.</string>
         <!--signIn-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="signIn" id="BYZ-38-t0r" customClass="SignInViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInViewController" title="signIn" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="SignInViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -255,7 +255,6 @@ send you a temporary password.</string>
                                         </state>
                                         <connections>
                                             <action selector="signOut:" destination="qix-Aq-Vg8" eventType="touchUpInside" id="f4C-Dv-Pcb"/>
-                                            <segue destination="BYZ-38-t0r" kind="modal" id="gMt-aE-nju"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -986,10 +985,10 @@ send you a temporary password.</string>
         <image name="1169645.jpg" width="634" height="368"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="geZ-IE-8sp"/>
         <segue reference="JZL-so-WAM"/>
         <segue reference="tPV-cf-Y4b"/>
-        <segue reference="eDG-sU-cWG"/>
         <segue reference="u1L-c5-W4l"/>
-        <segue reference="gMt-aE-nju"/>
+        <segue reference="eDG-sU-cWG"/>
     </inferredMetricsTieBreakers>
 </document>

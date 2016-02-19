@@ -36,6 +36,8 @@ NSDictionary *classes;
 NSArray<NSString*> *allClassNames;
 NSMutableDictionary *result;
 
+
+
 - (void)viewDidLoad {
   [super viewDidLoad];
     [self.tableView reloadData];
@@ -155,6 +157,11 @@ NSMutableDictionary *result;
     name = @"";
     year = @"";
     major = @"";
+    
+    viewcontroller = [mainstoryboard instantiateViewControllerWithIdentifier:@"SignInViewController"];
+    [self presentViewController:viewcontroller animated:YES completion:nil];
+    
+    
 }
 
 - (IBAction)keyboardExit:(id)sender{} //dismiss keyboard
