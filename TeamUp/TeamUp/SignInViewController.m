@@ -109,6 +109,7 @@ UIAlertAction* defaultAction1;
 
 - (IBAction)signIn:(UIButton *)sender {
     [self sign];
+    //[self.view endEditing:YES];
 }
 
 - (void) sign {

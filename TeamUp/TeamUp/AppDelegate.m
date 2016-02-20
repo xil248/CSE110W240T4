@@ -12,6 +12,31 @@
 
 @end
 
+
+/*
+@interface MyController : UIViewController <UITextFieldDelegate>
+
+
+
+   self.mytestField.delegate = self;
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    return YES;
+}
+
+// It is important for you to hide the keyboard
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+
+
+@end
+*/
+
 @implementation AppDelegate
 
 
@@ -122,6 +147,19 @@
             abort();
         }
     }
+}
+
+
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.window endEditing:YES];
+}
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end
