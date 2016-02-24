@@ -30,6 +30,7 @@
 		5AC47BA91C726C23006DD3B5 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC47BA81C726C23006DD3B5 /* SignInViewController.m */; };
 		5AC47BAA1C726C23006DD3B5 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC47BA81C726C23006DD3B5 /* SignInViewController.m */; };
 		5AC47BAB1C726C23006DD3B5 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC47BA81C726C23006DD3B5 /* SignInViewController.m */; };
+		94BF50F31C7E6E05006FF812 /* myGroupsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BF50F21C7E6E05006FF812 /* myGroupsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,8 @@
 		5AC47BA31C726BF4006DD3B5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5AC47BA71C726C23006DD3B5 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		5AC47BA81C726C23006DD3B5 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		94BF50F11C7E6E05006FF812 /* myGroupsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myGroupsViewController.h; sourceTree = "<group>"; };
+		94BF50F21C7E6E05006FF812 /* myGroupsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myGroupsViewController.m; sourceTree = "<group>"; };
 		94D56AEECF75E39C576FAED8 /* libPods-TeamUp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TeamUp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB480674000418BEE6F1B1D6 /* Pods-TeamUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TeamUp/Pods-TeamUp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +163,8 @@
 				5410FDB21C65B7AB001DA96D /* MessagesViewController.swift */,
 				5410FFB41C65CBC1001DA96D /* Message.swift */,
 				54EA6C401C58A5E600BF3DC6 /* Main.storyboard */,
+				94BF50F11C7E6E05006FF812 /* myGroupsViewController.h */,
+				94BF50F21C7E6E05006FF812 /* myGroupsViewController.m */,
 				5A9F5FFF1C5D8735005225B7 /* 1169645.jpg */,
 				54EA6C461C58A5E600BF3DC6 /* Assets.xcassets */,
 				54EA6C481C58A5E600BF3DC6 /* LaunchScreen.storyboard */,
@@ -402,6 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AC47BA91C726C23006DD3B5 /* SignInViewController.m in Sources */,
+				94BF50F31C7E6E05006FF812 /* myGroupsViewController.m in Sources */,
 				54EA6C3F1C58A5E600BF3DC6 /* ViewController.m in Sources */,
 				54EA6C3C1C58A5E600BF3DC6 /* AppDelegate.m in Sources */,
 				54EA6C451C58A5E600BF3DC6 /* TeamUp.xcdatamodeld in Sources */,
